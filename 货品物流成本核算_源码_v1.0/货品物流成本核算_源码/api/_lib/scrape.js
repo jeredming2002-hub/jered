@@ -72,7 +72,14 @@ async function readProduct(rawUrl) {
     response = await fetch(target, {
       signal: controller.signal,
       redirect: 'follow',
-      headers: {'user-agent': 'Mozilla/5.0 (compatible; ProductCostReader/1.0)', 'accept-language': 'ja,en;q=0.8,zh-CN;q=0.7'}
+      headers: {
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'accept-language': 'ja,en-US;q=0.8,en;q=0.7',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-dest': 'document',
+        'upgrade-insecure-requests': '1'
+      }
     });
   } finally {
     clearTimeout(timer);

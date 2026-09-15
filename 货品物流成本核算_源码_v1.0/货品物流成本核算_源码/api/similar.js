@@ -1,4 +1,4 @@
-const {readProduct} = require('./_lib/scrape');
+const {readProduct, weightKgFrom, volumeFromText} = require('./_lib/scrape');
 
 const RAKUTEN_SEARCH_ENDPOINT = 'https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701';
 const ALLOWED_WEBSITE = 'https://jp-shanghai-landed-cost-wens-en.vercel.app/';
@@ -47,15 +47,20 @@ module.exports = async function handler(req, res) {
 
     const items = (data.Items || data.items || [])
       .map(it => it.Item || it.item || it)
-      .map(it => ({
-        name: it.itemName || '',
-        shop: it.shopName || '',
-        priceJpy: Number(it.itemPrice) || 0,
-        url: it.itemUrl || '',
-        image: it.mediumImageUrls?.[0]?.imageUrl || '',
-        reviewCount: Number(it.reviewCount) || 0,
-        reviewAverage: Number(it.reviewAverage) || 0
-      }))
+      .map(it => {
+        const text = `${it.itemName || ''} ${it.catchcopy || ''} ${it.itemCaption || ''}`;
+        return {
+          name: it.itemName || '',
+          shop: it.shopName || '',
+          priceJpy: Number(it.itemPrice) || 0,
+          url: it.itemUrl || '',
+          image: it.mediumImageUrls?.[0]?.imageUrl || '',
+          reviewCount: Number(it.reviewCount) || 0,
+          reviewAverage: Number(it.reviewAverage) || 0,
+          weightKg: weightKgFrom(text) || '',
+          volumeM3: volumeFromText(text) || ''
+        };
+      })
       .filter(x => x.name && x.url);
 
     if (!items.length) throw new Error('未找到同类商品，请更换关键词');

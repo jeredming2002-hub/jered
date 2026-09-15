@@ -8,6 +8,7 @@
 - `api/product.js`：联网读取单个商品页面信息的 Vercel 接口
 - `api/similar.js`：按商品名/网址搜索楽天市场同类热销商品并对比参数的 Vercel 接口
 - `api/_lib/scrape.js`：两个接口共用的网页抓取/解析逻辑
+- `api/fx.js`：转发 Wise 实时汇率数据的 Vercel 接口（浏览器直接调用 Wise 会被 CORS 拦截，所以走这个接口中转，不需要任何密钥）
 
 ## 部署到 Vercel
 
