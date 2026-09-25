@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F9F8">
+<meta name="description" content="软体家具外贸学习台：知识模块、客户情景案例、常见问题、术语卡片和报价装柜计算器。">
+<title>软体家具外贸学习台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F7F9F8; --panel:#FFFFFF; --ink:#1E2A33; --ink2:#5B6770; --line:#E1E7E4;
+  --accent:#1F7A70; --accent-soft:#E4F2EF; --kraft:#A8712F; --kraft-soft:#FBF1E2; --warn:#B4532F; --warn-soft:#FCEDE7; --good:#2E7D4F;
+  --serif:"Noto Serif SC","Songti SC",serif; --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; --mono:"IBM Plex Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding:24px 16px 56px}
+.wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:270px 1fr;gap:32px;align-items:start}
+@media (max-width:860px){.wrap{grid-template-columns:1fr}}
+h1,h2,h3,h4{font-family:var(--serif);text-wrap:balance;margin:0}
+.en{font-family:var(--mono);font-size:.8em;color:var(--accent);font-weight:400}
+.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);font-family:var(--mono)}
+button:focus-visible,input:focus-visible,summary:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+aside{position:sticky;top:env(safe-area-inset-top,0px);display:flex;flex-direction:column;gap:16px;max-height:100vh;overflow:auto;padding-bottom:12px}
+@media (max-width:860px){aside{position:static;max-height:none}}
+.brand h1{font-size:24px;font-weight:900;line-height:1.3}
+.brand p{margin:4px 0 0;color:var(--ink2);font-size:13px}
+.meter{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;background:var(--accent);transition:width .4s}
+.group{display:flex;flex-direction:column;gap:2px}
+.group .label{margin:6px 0 4px}
+.mod{width:100%;text-align:left;background:none;border:1px solid transparent;border-radius:8px;padding:6px 10px;color:var(--ink);font:inherit;font-size:14px;cursor:pointer;display:grid;grid-template-columns:26px 1fr 12px;align-items:center;gap:6px;line-height:1.4}
+.mod:hover{background:var(--panel)}
+.mod.on{background:var(--panel);border-color:var(--line);font-weight:700}
+.mod .n{font-family:var(--mono);font-size:11px;color:var(--ink2);font-weight:400}
+.dot{width:10px;height:10px;border-radius:50%;border:1.5px solid #B8C2BE}
+.dot.done{background:var(--good);border-color:var(--good)}
+.navx{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+
+main{min-width:0}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:24px;overflow-x:auto}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;font:inherit;color:var(--ink2);cursor:pointer;white-space:nowrap}
+.tabs button.on{color:var(--ink);border-color:var(--accent);font-weight:700}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;margin-bottom:22px}
+.head h2{font-size:28px;line-height:1.35}
+.tag{display:inline-block;background:var(--kraft-soft);color:var(--kraft);font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:4px}
+.lead{color:var(--ink2);max-width:64ch;margin:6px 0 0}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:7px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer}
+.btn.ghost{background:var(--panel);color:var(--accent);border:1px solid var(--accent)}
+section.block{margin-bottom:34px}
+section.block>h3{font-size:19px;margin-bottom:12px;display:flex;align-items:baseline;gap:10px}
+section.block>h3 small{font-family:var(--mono);font-size:11px;color:var(--ink2);font-weight:400;letter-spacing:.1em}
+
+.points{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.pt{display:grid;grid-template-columns:190px 1fr;gap:16px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.pt:last-child{border-bottom:0}
+@media (max-width:620px){.pt{grid-template-columns:1fr;gap:4px}}
+.pt h4{font-size:16px;line-height:1.45}
+.pt h4 .en{display:block;margin-top:2px}
+.pt p{margin:0}
+.eg{margin-top:6px;font-size:13.5px;color:var(--ink2)}
+.eg b{color:var(--kraft);font-weight:500}
+.note{border-left:3px solid var(--kraft);padding:10px 14px;background:var(--kraft-soft);border-radius:0 8px 8px 0;font-size:14px}
+.note.warn{border-color:var(--warn);background:var(--warn-soft)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table.t{border-collapse:collapse;width:100%;font-size:14px}
+table.t th,table.t td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.t tr:last-child td{border-bottom:0}
+table.t th{font-size:12px;color:var(--ink2);font-weight:500;background:#FBFCFB}
+.email{font-family:var(--mono);font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;white-space:pre-wrap;overflow-x:auto}
+
+.faqbar{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+details.faq{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+details.faq summary{list-style:none;cursor:pointer;padding:12px 16px;display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;font-weight:500}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .q{font-family:var(--mono);color:var(--accent);font-size:13px;padding-top:2px}
+details.faq summary .hint{font-size:12px;color:var(--accent);white-space:nowrap;padding-top:2px}
+details.faq[open] summary .hint{color:var(--ink2)}
+details.faq .a{padding:0 16px 14px 52px;color:var(--ink);font-size:14.5px}
+details.faq .a::before{content:"答";font-family:var(--serif);color:var(--kraft);font-weight:900;margin-right:8px}
+.pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+
+.cardzone{display:flex;flex-direction:column;align-items:center;gap:14px}
+.flash{width:100%;max-width:540px;min-height:220px;background:var(--panel);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:26px;cursor:pointer;position:relative;box-shadow:0 1px 2px rgba(30,42,51,.05)}
+.flash::before{content:"";position:absolute;inset:10px;border:1px dashed var(--line);border-radius:9px;pointer-events:none}
+.flash .term{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--accent)}
+.flash .cn{font-family:var(--serif);font-size:20px}
+.flash .def{font-size:14.5px;color:var(--ink2);max-width:42ch;margin-top:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:center}
+
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.calc label{font-size:12px;color:var(--ink2);display:flex;flex-direction:column;gap:4px}
+.calc input{font:inherit;font-family:var(--mono);padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:100%}
+.out{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+.out div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--panel)}
+.out b{display:block;font-family:var(--mono);font-size:22px;font-variant-numeric:tabular-nums}
+.out span{font-size:12px;color:var(--ink2)}
+textarea{width:100%;min-height:180px;font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)}
+.search{width:100%;font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.steps li{display:grid;grid-template-columns:44px 150px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14.5px}
+.steps li:last-child{border-bottom:0}
+.steps .sn{font-family:var(--mono);color:var(--accent);font-weight:600}
+.steps .sw{font-weight:700}
+@media (max-width:620px){.steps li{grid-template-columns:36px 1fr}.steps li>span:last-child{grid-column:2}}
+.pits{margin:0;padding:12px 16px 12px 34px;background:var(--warn-soft);border:1px solid #F3D5C8;border-radius:12px;font-size:14.5px}
+.pits li{margin:4px 0}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;color:var(--ink2);cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:18px}
+.case h3{font-size:18px;margin:6px 0 10px}
+.case .k{font-size:12px;color:var(--ink2);font-family:var(--mono);letter-spacing:.08em;margin:12px 0 4px}
+.case p{margin:0}
+.case .email{background:#FBFCFB}
+.case details{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px}
+.case summary{cursor:pointer;color:var(--accent);font-weight:500;font-size:14px}
+.case details[open] summary{margin-bottom:8px}
+.case ul{margin:0;padding-left:20px}
+#navToggle{display:none;align-items:center;justify-content:space-between;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer}
+#navToggle .cur{color:var(--accent);font-weight:700}
+@media (max-width:1024px){.wrap{grid-template-columns:230px 1fr;gap:24px}.pt{grid-template-columns:150px 1fr}}
+@media (max-width:860px){
+ .wrap{grid-template-columns:1fr;gap:16px}
+ aside{gap:12px}
+ .brand h1 br{display:none}
+ .brand h1{font-size:21px}
+ #navToggle{display:flex}
+ aside:not(.open) #nav,aside:not(.open) .navx,aside:not(.open) .asidenote{display:none}
+ .tabs{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;margin-inline:-16px;padding-inline:16px;margin-bottom:18px}
+ .mod{padding:9px 10px}
+}
+@media (max-width:620px){.pt{grid-template-columns:1fr}}
+@media (max-width:480px){
+ body{font-size:14.5px}
+ .head h2{font-size:22px}
+ section.block>h3{font-size:17px}
+ .case{padding:14px}
+ .case h3{font-size:16.5px}
+ .email{font-size:12px;padding:12px}
+ .flash{min-height:200px;padding:20px}
+ .flash .term{font-size:22px}
+ details.faq summary{grid-template-columns:24px 1fr;padding:12px}
+ details.faq summary .hint{grid-column:2}
+ details.faq .a{padding:0 12px 12px 12px}
+ .tabs button{padding:10px 10px}
+ .btn{padding:8px 12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+  <div class="brand">
+    <h1>软体家具<br>外贸学习台</h1>
+    <p>从面试到实战 · 欧美市场为主</p>
+  </div>
+  <div>
+    <div class="label">已掌握 <span id="pct"></span></div>
+    <div class="meter"><i id="bar"></i></div>
+  </div>
+  <button id="navToggle" aria-expanded="false"><span>目录 · <span class="cur" id="curName"></span></span><span id="navArrow">展开 ▾</span></button>
+  <nav id="nav"></nav>
+  <div class="navx" id="navx"></div>
+  <p class="asidenote" style="font-size:12px;color:var(--ink2);margin:0">进度和笔记只保存在当前浏览器。关税、法规、退税率、运价经常变，文中标“需核实”的内容以官方和公司最新要求为准。</p>
+</aside>
+
+<main>
+  <div class="tabs">
+    <button class="on" data-tab="learn">知识讲义</button>
+    <button data-tab="cases">客户情景案例</button>
+    <button data-tab="allfaq">常见问题总览</button>
+    <button data-tab="cards">术语卡片</button>
+    <button data-tab="tools">报价与装柜计算</button>
+    <button data-tab="notes">我的笔记</button>
+  </div>
+  <div id="learn"></div>
+  <div id="cases" hidden></div>
+  <div id="allfaq" hidden></div>
+  <div id="cards" hidden>
+    <div class="head"><div><h2>术语卡片</h2><p class="lead">先看英文说出中文意思，再点击翻面核对。</p></div><span class="tag" id="cardpos"></span></div>
+    <div class="cardzone">
+      <div class="flash" id="flash" tabindex="0"></div>
+      <div class="row">
+        <button class="btn ghost" id="prev">上一张</button>
+        <button class="btn" id="flip">翻面</button>
+        <button class="btn ghost" id="next">下一张</button>
+        <button class="btn ghost" id="shuf">打乱顺序</button>
+      </div>
+    </div>
+  </div>
+  <div id="tools" hidden></div>
+  <div id="notes" hidden>
+    <div class="head"><div><h2>我的笔记</h2><p class="lead">记下没弄懂的点和想在面试里问的问题，下次可以复制给 Claude 一起讲。</p></div></div>
+    <textarea id="note" placeholder="例如：电放和寄正本提单，风险有什么区别？"></textarea>
+    <div class="row" style="justify-content:flex-start;margin-top:10px"><button class="btn" id="copyn">复制笔记</button><span id="saved" style="font-size:12px;color:var(--ink2)"></span></div>
+  </div>
+</main>
+</div>
+
+<script>
+const S={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* 内容：按学习逻辑排列  认识行业 → 懂产品 → 交易规则 → 算钱 → 把货送出去 → 合规 → 找客户 → 管风险 → 面试 */
+const GROUPS=[
+ {name:"一 · 先看懂这份工作",mods:[
+  {id:"role",t:"外贸管培生做什么",sub:"岗位、公司类型、业务模式、部门分工",
+   intro:"先弄清你要进的是什么公司、做什么事、和谁配合。后面所有知识都挂在这张图上。",
+   pts:[
+    ["管培生","Management Trainee","公司重点培养的新人。一般先轮岗（跟单、单证、QC、业务助理），再做业务助理，最后独立开发客户、拿提成。","考核常看：轮岗评价、询盘回复质量、开发客户数、首单成交。"],
+    ["工厂 / 贸易 / 工贸一体","Manufacturer / Trading / Hybrid","工厂自己生产，价格和交期可控；贸易公司对接多家工厂，品类广；工贸一体两者都有，家具行业最常见。","在工厂型公司，你要经常下车间看工艺。"],
+    ["OEM","Original Equipment Manufacturer","按客户的设计和品牌来生产。客户给图纸，工厂照做。","美国品牌商给出沙发设计图，工厂按图生产、贴它的牌子。"],
+    ["ODM","Original Design Manufacturer","工厂自己出设计，客户挑款，贴客户的品牌。软体家具最常见的是 ODM 加定制：改面料、颜色、尺寸。","客户在展会上看中一款三人位沙发，要求换成灰色绒布、座深加 5 cm。"],
+    ["OBM","Own Brand Manufacturer","用工厂自己的品牌出口，比如做跨境电商自有品牌。",""],
+    ["部门分工","Departments","业务接单 → 跟单跟进生产 → 采购买面料、海绵、五金 → 生产 → QC 检验 → 单证订舱、报关 → 财务收汇、退税。","业务员是客户和工厂之间的桥：对外代表工厂，对内代表客户。"]],
+   faq:[
+    ["外贸业务员和跟单员有什么区别？","业务员负责找客户、报价、谈判、接单，是订单的源头；跟单员负责接单之后的执行：下生产单、跟进度、盯品质、协调出货。小公司里经常一个人兼两份工作。"],
+    ["为什么软体家具行业多是 ODM？","沙发款式更新快，大部分客户（进口商、零售商）没有自己的设计团队，更愿意在工厂现有款式上改面料、颜色、尺寸，这样开发快、成本低。"],
+    ["管培生前几个月最该做好什么？","熟悉产品和工艺（多下车间）、熟悉公司价格体系和报价模板、把每个询盘回复得又快又准。领导最看重的是学习速度和做事靠谱。"]]},
+  {id:"flow",t:"一张订单怎么走完",sub:"14 步、4 个阶段",
+   intro:"面试最常问的问题之一。把 14 步归成 4 个阶段来记：找客户 → 接单 → 做货 → 出货收款。",
+   pts:[
+    ["① 找客户","Prospect → Inquiry → Quotation","开发客户 → 客户询盘 → 报价。报价写清价格条款、付款方式、交期、有效期、包装、装柜量。","询盘最好 24 小时内回复。"],
+    ["② 接单","Sample → Negotiate → PI → Deposit","打样 → 谈判 → 签形式发票（PI）或合同 → 收定金（常见 30%）。","所有定制细节都要写进 PI：面料编号、颜色、尺寸、脚型、包装。"],
+    ["③ 做货","Production → PP Sample → Inspection","采购材料 → 生产 → 确认产前样 → 出货前验货。","面料交期往往决定整单交期。"],
+    ["④ 出货收款","Booking → Customs → Balance → Rebate","订舱装柜 → 报关 → 客户见提单副本付尾款 → 放单（电放或寄正本）→ 出口退税 → 售后和复购。","尾款到账之前不放单。"]],
+   extra:`<section class="block"><h3>面试怎么说 <small>约 45 秒</small></h3><div class="note">我理解一张外贸订单大概分四个阶段。第一是找客户：通过展会、平台或主动开发拿到询盘，然后报价，写清价格条款、MOQ、交期和装柜量。第二是接单：打样、谈判，确认后签 PI，收 30% 定金。第三是做货：采购面料、海绵等材料，排产，确认产前样，出货前按 AQL 验货。第四是出货收款：订舱、装柜、报关，客户凭提单副本付尾款后我们放单，最后办出口退税，并跟进客户反馈争取复购。软体家具里有两点特别关键：一是面料的交期和色差，二是定制细节一定要在 PI 上写清楚。</div></section>`,
+   faq:[
+    ["客户付了 30% 定金，货已出运，70% 尾款一般什么时候付？","常见做法是客户看到提单副本（copy of B/L）后付尾款。我们确认到账后，再做电放或寄正本提单，客户才能提货。钱没到不放单，这是控制收款风险的关键。"],
+    ["为什么软体家具订单的交期常常取决于面料？","很多面料要定织、定染，交期长；而且同一订单必须用同一批次面料，避免色差。所以面料一晚到，整个生产就要往后推。"],
+    ["PI 和合同是一回事吗？","PI（Proforma Invoice，形式发票）是卖方开出的订单确认单，列明品名、规格、数量、单价、条款。双方签字后，实务中常当合同使用，也是客户付定金的依据。大客户会另外签正式的采购合同（PO / Sales Contract）。"]]}
+ ]},
+ {name:"二 · 懂产品",mods:[
+  {id:"product",t:"软体家具产品知识",sub:"结构、材料、工艺、包装",
+   intro:"客户问的第一类问题永远是产品。把一张沙发从里到外拆开来记：框架 → 弹性层 → 填充 → 面料 → 包装。",
+   pts:[
+    ["品类","Upholstered Furniture","软体家具指用海绵、面料包覆的家具：沙发（sofa）、组合沙发（sectional）、休闲椅（accent chair）、软包床（upholstered bed）、餐椅（dining chair）、脚凳（ottoman）。","L 形的转角组合沙发叫 sectional，带贵妃位的叫 chaise。"],
+    ["框架","Frame","常见实木（硬木更好）、多层板（plywood）、密度板或它们的组合。好框架的榫接处会加胶、钉，并用角码加固。","客户问 frame 时，说清材料和结构，比如 solid wood + plywood frame, corner blocks glued and stapled。"],
+    ["弹性层","Suspension","蛇形弹簧（S 簧，serpentine / sinuous spring）最常见；独立袋装弹簧（pocket spring）坐感更好、价格更高；也有弹力带（elastic webbing），多用于靠背或低价款。",""],
+    ["海绵","Foam","看密度（density，kg/m³）和硬度。密度越高越耐用、回弹越好。高回弹海绵叫 HR foam；羽绒包海绵（feather-wrapped）坐感软、价格高。","座包常见 30–35 kg/m³ 以上，具体按客户价位和要求。"],
+    ["面料","Fabric / Leather","布艺：绒布（velvet）、麻布（linen look）、雪尼尔（chenille）、科技布、泰迪绒（boucle）。皮革：头层真皮（top grain）、PU、PVC。","耐磨测试叫 Martindale（马丁代尔）次数，家用常见 2 万次以上，数值越高越耐磨。"],
+    ["工艺","Upholstery Process","开料 → 做框架 → 打底（钉弹簧、贴海绵）→ 裁剪缝纫面料 → 扪皮（把面料包上去）→ 质检 → 包装。","车线直不直、对格对条、褶皱是否均匀，是验货的重点。"],
+    ["包装","Packaging","常见五层瓦楞纸箱（5-ply carton）+ 护角 + 珍珠棉 + 塑料袋。可拆脚、可拆靠背能减少体积。压缩打卷包装（roll-pack / compressed）多用于电商。","电商客户（如亚马逊卖家）常要求通过跌落测试 ISTA 3A，需向客户确认具体标准。"],
+    ["KD 与非 KD","KD / Fully Assembled","KD（Knock Down）指可拆装，运输体积小、装柜多；整装（fully assembled）到货即用，但占体积。","同一款沙发，KD 设计可能让一个 40HQ 从 60 套装到 100 套以上，直接影响运费。"]],
+   faq:[
+    ["客户问“What's the foam density?”，怎么回答？","说出座包和靠背分别用什么海绵、密度多少，例如：Seat cushion: 35D high-resilience foam wrapped with polyester fiber; back: 25D foam + fiber。不确定时先问工厂，不要随口报数字。"],
+    ["S 簧和独立袋装弹簧有什么区别？","S 簧是一根根 Z 字形钢丝横在框架上，成本低、耐用，是主流；独立袋装弹簧是每个弹簧单独装在布袋里，受力独立，坐感更好、更贵，常用于中高端款。"],
+    ["Martindale 是什么？","衡量面料耐磨的测试，数值是面料被磨到出现破损时的摩擦次数。家用一般 2 万次以上，商用（酒店、办公）要求更高，常见 4 万次以上。"],
+    ["为什么要关注产品能不能拆装（KD）？","沙发体积大、重量轻，运费和装柜量基本按体积算。能拆的设计让同一个柜子多装很多套，每套分摊的运费就更低，客户的到岸成本也更有竞争力。"]]}
+ ]},
+ {name:"三 · 交易规则",mods:[
+  {id:"inco",t:"贸易术语 Incoterms 2020",sub:"谁付运费、谁担风险",
+   intro:"贸易术语用三个字母讲清两件事：费用付到哪、风险在哪里转移。家具出口最常用 FOB、CIF/CFR、EXW 和 DDP。",
+   pts:[
+    ["EXW","Ex Works 工厂交货","卖方在工厂备好货就算交货，之后的装车、报关、运输全由买方负责。卖方责任最小。","新人容易忽略：EXW 下卖方通常不负责出口报关，但实务中国内工厂往往还要协助买方报关。"],
+    ["FOB","Free On Board 船上交货","卖方负责把货装上买方指定的船，承担到装船为止的费用和风险，包括出口报关。运费和保险由买方负责。","最常见的报价方式：“FOB Shenzhen / Ningbo”。"],
+    ["CFR","Cost and Freight 成本加运费","在 FOB 基础上，卖方再付海运费到目的港。风险仍在装船时转移给买方。",""],
+    ["CIF","Cost, Insurance and Freight","在 CFR 基础上，卖方再买海运保险（最低险别）。风险同样在装船时转移。","记忆：CIF = FOB + 运费 + 保险。"],
+    ["DAP / DDP","Delivered at Place / Delivered Duty Paid","卖方把货送到买方指定地点。DDP 还要负责进口清关和缴纳进口关税，卖方责任最大。","美国关税高且经常变，报 DDP 前一定要算清关税，否则可能亏本。"],
+    ["FCA","Free Carrier 货交承运人","卖方把货交给买方指定的承运人即完成交货。适合集装箱运输，是国际商会推荐替代 FOB 的术语，但家具行业仍多用 FOB。",""]],
+   extra:`<section class="block"><h3>一张表记住</h3><div class="tw"><table class="t"><tr><th>术语</th><th>卖方付运费吗</th><th>卖方付保险吗</th><th>风险在哪转移</th><th>卖方负责进口清关吗</th></tr>
+   <tr><td>EXW</td><td>否</td><td>否</td><td>卖方工厂</td><td>否</td></tr>
+   <tr><td>FOB</td><td>否</td><td>否</td><td>装上船</td><td>否</td></tr>
+   <tr><td>CFR</td><td>是（到目的港）</td><td>否</td><td>装上船</td><td>否</td></tr>
+   <tr><td>CIF</td><td>是（到目的港）</td><td>是</td><td>装上船</td><td>否</td></tr>
+   <tr><td>DAP</td><td>是（到指定地点）</td><td>自行决定</td><td>目的地</td><td>否</td></tr>
+   <tr><td>DDP</td><td>是（到指定地点）</td><td>自行决定</td><td>目的地</td><td>是，含关税</td></tr></table></div></section>`,
+   faq:[
+    ["FOB 和 CIF 最大的区别是什么？","费用不同，风险转移点相同。CIF 下卖方多付了海运费和保险费，但两者的风险都在货物装上船时转给买方。"],
+    ["欧美客户为什么多用 FOB？","大进口商有自己合作的货代和船公司，运价更低、更可控，所以愿意自己订舱，只要求工厂 FOB 交货。"],
+    ["CIF 下货在海上出了事，找谁？","风险已经在装船时转移给买方，所以由买方凭卖方买的保险单向保险公司索赔。卖方要协助提供单据。"],
+    ["客户要求报 DDP，要注意什么？","要算清目的国进口关税、清关费、目的港费用、送货费。美国对中国家具的关税近年变化很大，报价前必须查最新税率，并设较短的报价有效期。"]]},
+  {id:"pay",t:"付款方式",sub:"T/T、L/C、D/P、信保",
+   intro:"外贸最大的风险是收不到钱。付款方式决定了钱和货谁先到、风险在谁身上。",
+   pts:[
+    ["T/T 电汇","Telegraphic Transfer","银行转账，最常用。常见组合：30% 定金 + 70% 见提单副本付清（30% deposit, 70% against copy of B/L）。","对老客户可能放宽到 70% 到港后付，风险变大。"],
+    ["L/C 信用证","Letter of Credit","买方银行做担保：只要卖方交的单据完全符合信用证条款，银行就付款。安全性高，但手续多、费用高，单据有一点不符（不符点）就可能被拒付。","收到信用证后先审证，发现做不到的条款立刻要求改证。"],
+    ["D/P 付款交单","Documents against Payment","卖方通过银行把单据交给买方银行，买方付款后才能拿到单据提货。",""],
+    ["D/A 承兑交单","Documents against Acceptance","买方在汇票上签字承诺到期付款（承兑）就能拿单提货，风险比 D/P 高很多。",""],
+    ["O/A 赊销","Open Account","先发货、后收款（如到货后 30/60 天付）。欧美大零售商常要求，风险最高，一般要配合出口信用保险。","中国出口信用保险公司（中信保）可以为赊销买保险。"]],
+   faq:[
+    ["按对卖方的安全程度排序，这几种付款方式怎么排？","从安全到风险：100% 预付 T/T > 信用证 L/C（单证相符）> 定金 + 见提单副本付尾款 > D/P > D/A > O/A 赊销。"],
+    ["什么是信用证的“不符点”？","卖方交给银行的单据和信用证条款不一致，比如品名拼写、日期、数量不符。有不符点银行可以拒付，所以做信用证单据必须一字一字核对。"],
+    ["新客户要求 100% 到货后付款，怎么回应？","说明公司对新客户的标准条款（如 30% 定金、70% 见提单副本付），可以先用小单建立信任。如果客户实力强、坚持赊销，需要先查资信，并投保出口信用保险，由领导决定。"]]}
+ ]},
+ {name:"四 · 算钱",mods:[
+  {id:"quote",t:"报价计算",sub:"成本、利润、退税、汇率",
+   intro:"报价就是把人民币成本换算成客户能看懂的美元价格，并留出利润。公式看起来多，其实只有三步。",
+   pts:[
+    ["第一步：算成本","Cost","产品出厂成本（含税）+ 包装 + 国内运费、报关费等杂费。","贸易公司的成本就是工厂的供货价。"],
+    ["第二步：算退税","Export Tax Rebate","退税额 = 含税采购价 ÷ (1 + 13%) × 退税率。退税是国家退回的增值税，可以用来降低报价。","家具退税率常见为 13%，但会调整，以当年公告为准（需核实）。"],
+    ["第三步：换算美元","Exchange Rate","FOB 美元价 = (成本 + 杂费 − 退税) ÷ (1 − 利润率) ÷ 汇率。汇率一般用比实时稍保守的数。","汇率波动会吃掉利润，所以报价要写有效期，比如 30 天。"],
+    ["CFR / CIF 报价","Freight / Insurance","CFR = FOB + 每套分摊的海运费；CIF 还要加保险费。每套运费 = 整柜运费 ÷ 装柜套数。","运价波动大，报 CFR/CIF 时要写明按当前运价，变动则调整。"],
+    ["报价单要素","Quotation Sheet","产品图片、型号、尺寸、材料、面料、包装尺寸和体积、单价、价格条款、MOQ、装柜量、付款方式、交期、有效期。","少任何一项都会让客户回来追问，显得不专业。"]],
+   extra:`<section class="block"><h3>算一个例子</h3><div class="note">一款三人位沙发，工厂含税价 ¥1,600，杂费每套 ¥60，退税率 13%，目标利润率 15%，汇率按 7.0。<br>
+   ① 退税 = 1600 ÷ 1.13 × 13% ≈ ¥184<br>
+   ② 实际成本 = 1600 + 60 − 184 = ¥1,476<br>
+   ③ FOB = 1476 ÷ (1 − 15%) ÷ 7.0 ≈ <b>USD 248 / 套</b><br>
+   到“报价与装柜计算”页可以自己改数字试试。</div></section>`,
+   faq:[
+    ["为什么报价单一定要写有效期？","原材料价格、汇率、运费都在变。写上有效期（如 30 天），过期可以重新报价，避免按旧价格接单导致亏损。"],
+    ["客户嫌贵要求降价 10%，第一反应应该是什么？","不马上答应。先问清客户的目标价和数量，再从这几个方向谈：增加订单量、换便宜一点的面料或海绵、简化包装、改付款条件。实在要降价，也要换回点什么（更大数量、更好的付款方式）。"],
+    ["退税为什么能降低报价？","出口货物可以退回部分国内已缴的增值税，这笔钱是额外收入，所以核算成本时可以减掉，报价就更有竞争力。"]]},
+  {id:"load",t:"装柜与 CBM",sub:"体积、柜型、整柜拼箱",
+   intro:"沙发是“泡货”：体积大、重量轻，运费按体积算。能算清一个柜装多少套，是报价的基本功。",
+   pts:[
+    ["CBM","Cubic Meter 立方米","体积 = 长 × 宽 × 高（单位米）。外箱 210 × 95 × 85 cm 的沙发，体积 = 2.1 × 0.95 × 0.85 ≈ 1.70 m³。",""],
+    ["柜型","Container Types","20GP 约 33 m³；40GP 约 67 m³；40HQ（高柜）约 76 m³。沙发最常用 40HQ。","实际能装的一般只有内容积的 80–90%，因为箱子之间有空隙。"],
+    ["装柜量","Loading Quantity","装柜套数 ≈ 柜子容积 × 装载率 ÷ 每套体积。上面那款：76 × 85% ÷ 1.70 ≈ 38 套/40HQ。","报价单上要写“Loading: 38 sets / 40HQ”。"],
+    ["整柜与拼箱","FCL / LCL","FCL（Full Container Load）整柜，一个客户包一个柜；LCL（Less than Container Load）拼箱，多个客户的货拼在一个柜，按体积收费，单价更高、转运多、容易破损。","样品或小订单常走拼箱。"],
+    ["混装","Mixed Loading","一个柜装多款产品。客户想试多款时常见，要提前确认每款数量和装柜顺序。",""]],
+   faq:[
+    ["一套沙发 1.5 m³，40HQ 大约能装多少套？","76 × 85% ÷ 1.5 ≈ 43 套。实际数量要请工厂按堆叠方式确认，报价时写“约”或按工厂实际装柜量。"],
+    ["为什么客户很关心装柜量？","海运费按柜收。装得越多，每套分摊的运费越低，客户的到岸成本就越低。对欧美客户来说，到岸成本常常比 FOB 价更重要。"],
+    ["MOQ 为什么常常以“一个柜”来定？","不满一个柜就要走拼箱，单价高、易破损，对双方都不划算。所以很多家具工厂把 MOQ 定为一个 40HQ，可混装几款。"]]}
+ ]},
+ {name:"五 · 把货送出去",mods:[
+  {id:"logi",t:"物流、单证与退税",sub:"订舱、报关、提单、退税",
+   intro:"货做好之后，要订到船、报好关、做对单据，客户才能提货、我们才能收钱和退税。",
+   pts:[
+    ["订舱","Booking","通过货代（Freight Forwarder）或船公司订舱位，拿到订舱确认（S/O）后安排拖车去工厂装柜。","旺季（美国年底前、春节前）舱位紧张、运费上涨，要提前 2–3 周订。"],
+    ["装柜照片","Loading Photos","拍空柜、装一半、装满、关门、封条号。万一到货破损或少货，这是证据。",""],
+    ["商业发票与装箱单","CI / PL","商业发票（Commercial Invoice）列货值，装箱单（Packing List）列箱数、毛重、净重、体积。清关、收款都要用。",""],
+    ["提单","Bill of Lading, B/L","船公司签发的运输单据，也是物权凭证：谁拿着正本提单，谁就能提货。电放（Telex Release）指不寄正本，船公司凭卖方指示直接放货。","尾款到账后才电放或寄正本。"],
+    ["原产地证","Certificate of Origin, CO","证明货物在中国生产。部分国家凭它享受关税优惠（如与中国有自贸协定的国家）。",""],
+    ["报关","Customs Declaration","向中国海关申报出口，需要准确的 HS 编码（商品编码）、品名、数量、货值。沙发大多在 9401 章节。","HS 编码决定监管条件和退税率，报错会影响退税。"],
+    ["出口退税","Export Tax Rebate","出口后凭报关单和增值税专用发票，向税务局申请退还增值税。一般由单证或财务办理。",""]],
+   faq:[
+    ["电放和寄正本提单有什么区别？","寄正本要快递给客户，客户拿正本去提货，慢、费用高；电放不出正本或交回正本，船公司凭卖方指示放货，快、方便。两种方式都要先确认收齐尾款。"],
+    ["货代是做什么的？","帮货主订舱、安排拖车、报关、做单据，是工厂和船公司之间的中间人。FOB 条款下通常由客户指定货代。"],
+    ["为什么要特别注意 HS 编码？","HS 编码决定出口监管要求、退税率，也影响目的国的进口关税。填错可能被海关查验、退税失败，或客户多交关税。"]]},
+  {id:"qc",t:"跟单与验货",sub:"生产跟进、AQL、售后索赔",
+   intro:"接单只是开始。按时、按质交货，才会有下一单。",
+   pts:[
+    ["生产单","Production Order","把 PI 的所有细节转成工厂能看懂的生产单：款式、面料编号、颜色、尺寸、数量、唛头、包装、交期。",""],
+    ["产前样","PP Sample","用大货的面料和材料做的样品，客户或业务确认后才开始批量生产。",""],
+    ["中期检验","Inline / DUPRO Inspection","生产 20–50% 时检查，及早发现问题。",""],
+    ["尾期验货","Final Random Inspection, FRI","至少 80% 完成包装后，按 AQL 抽检外观、尺寸、功能、包装、唛头。常见第三方：SGS、Intertek、QIMA、BV。","AQL 常见设定：严重缺陷 0、主要缺陷 2.5、次要缺陷 4.0，以客户要求为准。"],
+    ["常见缺陷","Common Defects","面料色差、脏污、车线不直或跳线、褶皱不均、海绵塌陷、框架异响、脚不平、包装破损、尺寸超差。",""],
+    ["售后索赔","Claim","客户反映破损或质量问题时，先要照片、视频和数量，分析原因（生产、包装还是运输），再商量补件、折扣或下单补偿。","处理快、态度好，常常能换来下一单。"]],
+   faq:[
+    ["AQL 是什么意思？","可接受质量水平。它决定一批货抽检多少件、允许多少个缺陷。缺陷数在允许范围内判定合格，超了就不合格，要返工再验。"],
+    ["验货不合格怎么办？","先看验货报告，找出问题原因，安排工厂返工或挑选，再申请复验。同时及时通知客户，说明原因和新的出货时间，不要瞒着客户。"],
+    ["客户收到货说有 5 套沙发面料破了，怎么处理？","先道歉并要照片、视频和柜号批次，调出装柜照片和验货报告判断责任。属于我方责任就提出方案（补发面料、补货、给折扣或抵下单），给出明确时间。"]]}
+ ]},
+ {name:"六 · 欧美市场与合规",mods:[
+  {id:"comp",t:"合规、认证与关税",sub:"美国、欧盟、英国",
+   intro:"欧美对家具有阻燃、化学物质、甲醛、木材来源等法规。不合规的货可能被扣、被召回。下面列出常见要点，具体以客户要求和官方最新规定为准。",
+   pts:[
+    ["美国：阻燃","16 CFR 1640 / CA TB117-2013","美国联邦软体家具阻燃标准（2021 年起实施）采用加州 TB117-2013 的要求，主要测试面料和填充物遇香烟阴燃时的表现，并需要相应标签。","客户常要求提供第三方测试报告。"],
+    ["美国：甲醛","TSCA Title VI","使用中纤板、刨花板、胶合板等人造板时，需要符合甲醛释放限值并有相应认证和标签。",""],
+    ["美国：加州 65 号提案","Prop 65","产品含有加州清单上的化学物质时，要给出警示标签。零售商通常会写进采购要求。",""],
+    ["美国：关税","Section 301 / 232 等","近年美国对中国家具加征多项关税，税率和清单频繁变化（2025 年起还有针对软体家具的新关税，需核实最新税率）。客户会把关税算进采购成本，所以很关注。","看美国贸易代表办公室（USTR）、美国海关（CBP）的公告，或问公司和客户。"],
+    ["欧盟：化学物质","REACH","限制和管控产品中的化学物质，比如面料和皮革中的偶氮染料、重金属等。",""],
+    ["欧盟：产品安全","GPSR","《通用产品安全法规》2024 年 12 月起实施，要求在欧盟有责任经营者、产品可追溯、有安全信息。电商平台卖家尤其要注意。",""],
+    ["欧盟：木材","EUTR → EUDR","欧盟零毁林法规（EUDR）要求木制品证明来源合法且不涉及毁林，实施日期多次推迟（需核实）。含实木框架的沙发可能涉及。",""],
+    ["英国：阻燃","UK FFR 1988","英国《家具及陈设（防火）（安全）法规》，要求软体家具面料和填充物通过阻燃测试并挂永久标签，是欧洲最严格的家具阻燃要求之一。",""]],
+   faq:[
+    ["美国客户问“Is it TB117-2013 compliant?”，怎么回答？","如实回答。有测试报告就说明可以提供第三方报告；没有就说可以安排送测，并说明测试时间和费用谁承担。不要为了拿单说“没问题”。"],
+    ["为什么同一款沙发发美国和发英国用的材料可能不同？","英国阻燃标准（FFR 1988）比美国更严，面料和海绵常要做阻燃处理或换阻燃材料，成本也更高。所以报价前要先确认目的国。"],
+    ["关税变化对你的工作有什么影响？","直接影响客户的采购成本和下单意愿。业务员要跟进最新税率，帮客户算清到岸成本；有的客户会要求工厂分担部分关税，或转向东南亚工厂，这时要能讲清我们的优势。"]]},
+  {id:"market",t:"欧美客户与市场",sub:"客户类型、渠道、沟通风格",
+   intro:"知道客户是谁、怎么采购、看重什么，才能说到点子上。",
+   pts:[
+    ["客户类型","Buyer Types","进口商 / 批发商（Importer / Wholesaler）、连锁零售商（Retailer，如家具连锁店）、电商卖家（如 Wayfair、Amazon 上的品牌）、品牌商、酒店工程客户（Contract / Hospitality）。","零售商要求最严：验厂、测试、包装、标签都要符合它的标准。"],
+    ["美国市场","US","市场最大，偏好大尺寸、坐感软、功能沙发（电动躺椅 recliner）、组合沙发。电商占比高，重视包装和跌落测试。旺季在年底，货要在 7–9 月出。",""],
+    ["欧洲市场","EU / UK","尺寸比美国小，重视环保、设计感和面料质感，订单往往款多量少。各国偏好不同：北欧偏简约，南欧偏色彩。",""],
+    ["展会","Trade Shows","中国：广州家具展（CIFF，3 月）、上海家具展（9 月）、广交会（春秋两季）。美国：High Point 家具市场（4 月、10 月）。欧洲：米兰展、科隆展等。","展会时间每年可能调整，以官方公布为准。"],
+    ["沟通风格","Communication","美国客户直接、讲效率，喜欢快速回复和明确结论；德国客户严谨，重视细节和守时；英国客户说话委婉，“quite good”不一定是很满意。","回复邮件先给结论，再给细节。"]],
+   faq:[
+    ["美国客户和欧洲客户最大的不同是什么？","美国订单量大、款少，看重价格、交期和包装；欧洲订单往往款多量少，更看重设计、环保和面料品质，合规要求（REACH、GPSR、英国阻燃）也更细。"],
+    ["为什么美国客户的货要在 7–9 月出？","海运到美国加内陆运输要 1–2 个月，零售商要在黑五和圣诞前上架，所以出货高峰前移到夏季。"]]}
+ ]},
+ {name:"七 · 找客户、谈客户",mods:[
+  {id:"dev",t:"客户开发与开发信",sub:"渠道、开发信、询盘回复",
+   intro:"管培生独立之后的核心工作就是开发客户。先知道去哪找，再学会写第一封信、回好每一个询盘。",
+   pts:[
+    ["开发渠道","Channels","展会；B2B 平台（阿里巴巴国际站、Made-in-China）；社交媒体（LinkedIn）；海关数据找买家；Google 搜索进口商和零售商官网；老客户转介绍。",""],
+    ["开发信原则","Cold Email","短（5–8 句）、针对对方（提到对方的店或产品）、给一个具体价值（新款、价格、交期优势）、结尾有一个简单行动（要不要看目录）。",""],
+    ["询盘回复","Inquiry Reply","先判断客户（官网、规模、询问的具体程度），再回复：感谢 → 回答全部问题 → 附报价和图片 → 问 1–2 个关键问题（数量、目标价、目的港）→ 下一步。","24 小时内回复，最好当天。"],
+    ["跟进","Follow-up","客户没回，隔 3–5 天换一个角度跟进（新品、库存面料、价格有效期），不要只说“Any update?”。",""]],
+   extra:`<section class="block"><h3>开发信范例</h3><div class="email">Subject: Upholstered sofas for Oak & Home – 40HQ from USD 248/set
+
+Hi Emma,
+
+I found Oak & Home's living room collection and noticed
+your boucle accent chairs. We are a sofa manufacturer in
+Foshan, supplying US retailers with fabric sofas and
+sectionals.
+
+Our new boucle sofa series ships 38 sets per 40HQ,
+FOB Shenzhen from USD 248/set, TB117-2013 compliant.
+
+Would you like me to send our 2026 catalog?
+
+Best regards,
+Leo</div><p class="lead" style="font-size:13.5px">结构：点名对方 → 我是谁 → 一个具体卖点（款式、价格、装柜量、合规）→ 一个简单的问题。示例中的公司名和人名是虚构的。</p></section>`,
+   faq:[
+    ["收到一个只写了“Please send price list”的询盘，怎么回？","先查客户背景。回复时附上主推款的目录和价格区间，同时问清关键信息：感兴趣的款式、预计数量、目的港、有没有目标价。这样既不怠慢，也能判断客户是否真实。"],
+    ["开发信总是没人回，常见原因是什么？","太长、太泛（群发感强）、没有针对对方的内容、标题没吸引力、发给了不负责采购的人。改进方法：先研究客户，找到采购负责人，标题写具体价值。"],
+    ["怎么判断一个询盘是不是有价值？","看客户有没有官网和实体业务、问得具不具体（款式、数量、目的港）、邮箱是企业邮箱还是免费邮箱、在海关数据里有没有进口记录。"]]},
+  {id:"nego",t:"客户维护与谈判",sub:"议价、复购、跨文化",
+   intro:"老客户的复购比新客户更重要。谈判的核心是不直接让价，而是交换条件。",
+   pts:[
+    ["议价原则","Negotiation","不直接降价；先问目标价和数量；用条件换价格（加量、改材料、改付款、延长交期）。",""],
+    ["常用句型","Phrases","We could offer a better price if the quantity increases to 2×40HQ.（如果数量加到两个 40HQ，我们可以给更好的价格。）","It's the best we can do based on current fabric cost.（按目前的面料成本，这已经是我们能给的最好价格。）"],
+    ["客户维护","Account Management","定期推新品（尤其在展会前）、主动更新生产进度、节日问候、复盘上一单的问题。",""],
+    ["坏消息怎么说","Bad News","延期、涨价、质量问题要主动、尽早说，同时给原因和解决方案。","We regret to inform you that… To minimize the impact, we will…"]],
+   faq:[
+    ["客户说“你们比越南工厂贵 8%”，怎么回应？","不急着降价。先确认是不是同样的规格和材料，再讲我们的优势：面料选择多、打样快、交期稳、品质稳定、配套齐全。然后看能否通过调整规格或加量来接近目标价。"],
+    ["生产要延期一周，怎么和客户说？","尽早主动通知，说明原因（如面料晚到）、新的出货日期，以及我们的补救措施（加班、分批出货）。不要等到原定日期才说。"]]}
+ ]},
+ {name:"八 · 守住风险",mods:[
+  {id:"risk",t:"风险防范",sub:"收款、诈骗、汇率、合规",
+   intro:"一单做坏可能亏掉一年的利润。管培生要先学会识别常见风险。",
+   pts:[
+    ["收款风险","Payment Risk","客户不付尾款、弃货。对策：定金 + 见提单付尾款；尾款到账前不放单；新客户、大金额查资信并投保信用保险。",""],
+    ["邮件诈骗","Email Fraud","骗子伪装客户或供应商邮箱，通知“银行账户变更”。对策：任何改账户的通知都要打电话或用原有渠道核实。","这是外贸最常见的诈骗之一。"],
+    ["假询盘","Fake Inquiry","要求先寄大量免费样品、点可疑链接、登录“查看订单”。对策：不点陌生链接，不在陌生页面输入邮箱密码。",""],
+    ["汇率风险","FX Risk","人民币升值会让美元收入换回的人民币变少。对策：报价写有效期、报价用保守汇率，大额订单可和财务商量锁汇。",""],
+    ["合规风险","Compliance Risk","测试不过、标签缺失、HS 编码错误、原产地问题，可能导致扣货、罚款或召回。",""],
+    ["质量与交期风险","Quality & Delay","延误客户销售季可能被取消订单或索赔。对策：关键节点跟进、提前预警。",""]],
+   faq:[
+    ["客户突然发邮件说“我们换了收款银行，请把退款打到新账户”（或供应商说要把货款转到新账户），怎么办？","先不要操作。用以前保存的电话或其他渠道联系对方确认，同时报告领导和财务。通过同一个邮件来回确认没用，因为邮箱可能已被盗。"],
+    ["为什么尾款到账前绝不能给客户正本提单？","正本提单是物权凭证，客户拿到就能提货。如果此时客户不付款，我们就钱货两空。"]]}
+ ]},
+ {name:"九 · 面试冲刺",mods:[
+  {id:"interview",t:"面试高频题",sub:"自我介绍、动机、情景题",
+   intro:"把前面学的知识组织成回答。每题先自己说一遍，再点开参考答案对照。",
+   pts:[
+    ["回答框架","STAR","情景（Situation）→ 任务（Task）→ 行动（Action）→ 结果（Result）。讲经历时用它，条理清楚。",""],
+    ["面试官想看什么","What They Look For","学习能力、抗压和耐心、沟通能力（包括英语）、对行业的了解、稳定性（会不会很快离职）。",""],
+    ["加分项","Bonus Points","提前研究公司的产品和市场；能说出几个软体家具术语；能讲清订单流程；准备好向面试官提问。",""]],
+   faq:[
+    ["请做一个 1 分钟的自我介绍。","结构：我是谁（学校、专业）→ 和岗位相关的能力（英语雅思 6.5、沟通、做过的相关实习或项目）→ 为什么想做外贸和这家公司 → 我能带来什么。示例结尾：“我对软体家具出口很感兴趣，已经开始学习产品结构和订单流程，希望能在贵公司从跟单做起，尽快独立开发欧美客户。”"],
+    ["你为什么选择外贸管培生这个岗位？","从三点回答：一是兴趣（喜欢和不同国家的人打交道，英语是优势）；二是成长（管培生能系统轮岗，看到订单的全流程）；三是和公司的匹配（公司做欧美软体家具，市场大，我已经在了解产品和合规）。"],
+    ["你对我们公司了解多少？","提前查好：主营产品（沙发、软床等）、主要市场（欧美）、公司类型（工厂还是工贸）、参加哪些展会、官网上的主推款。说出一两个具体产品，会比泛泛而谈有说服力得多。"],
+    ["如果客户三周都不回你的邮件，你会怎么做？","先检查自己的邮件（是否进了垃圾箱、内容是否有价值），再换角度跟进：推新品、分享面料或价格信息、换联系人，或用 LinkedIn、电话联系。同时分析客户是否真的有需求，合理分配时间。"],
+    ["客户收货后投诉质量问题，情绪很激动，你怎么办？","先安抚并表示重视，请客户提供照片、视频和数量；内部核对装柜照片和验货报告，查清原因；24 小时内给出处理方案和时间；处理完后复盘，避免再犯。"],
+    ["你有什么问题要问我们？","可以问：管培生的轮岗安排和考核方式；公司目前主要的客户类型和市场；新人多久可以开始独立跟客户。避免一上来就问薪资和假期。"],
+    ["你能接受出差和加班吗？","可以诚实表达接受：外贸有时差，旺季和展会期间加班、出差是常态，我理解也愿意配合。同时可以说明自己会提高效率，做好时间安排。"]]}
+ ]}
+];
+/* ===== 实操扩展：新增模块 ===== */
+const NEW_MODS={
+ sample:{id:"sample",t:"打样与样品管理",sub:"样品费、改样、封样",
+  intro:"客户下大单前几乎都要先看样。样品做得好不好、跟得紧不紧，直接决定能不能成交。",
+  pts:[
+   ["样品类型","Sample Types","看样（现有款直接寄）、确认样（按客户要求改面料/尺寸做）、产前样（PP Sample，用大货材料）、船样（Shipping Sample，从大货里抽出寄给客户）。","新客户一般先看样，下单后才有产前样和船样。"],
+   ["样品费","Sample Charge","沙发样品成本高，常见做法是收样品费，客户下单达到一定数量后退还或抵扣（refundable against the first order）。快递或空运费一般由客户承担，可用客户的快递账号（DHL / FedEx account）到付。","整套沙发走快递很贵，大样品常走空运或拼箱。"],
+   ["样品单","Sample Order Sheet","内部下给打样车间的单子：款号、尺寸、面料编号和颜色、海绵配置、脚型、包装、完成日期、附参考图。","口头说的要求最容易漏，一定写成单子。"],
+   ["封样","Sealed Sample","客户确认后的样品要留一套（或一块面料、一个部件）在工厂，贴上确认标签和日期，作为大货标准。","大货出现争议时，封样就是判定依据。"],
+   ["样品跟进","Sample Follow-up","寄出后给客户运单号，到货后 2–3 天主动问反馈，并准备好具体问题：坐感、尺寸、面料手感、颜色。",""]],
+  steps:[
+   ["确认需求","把客户要求逐条列出：款式、尺寸、面料和颜色、海绵软硬、脚型、包装，发给客户确认一次。"],
+   ["报样品费","写清样品费、运费、制作周期（常见 7–15 天）、样品费是否可退。"],
+   ["收款后下样品单","收到样品费再安排，附参考图和客户原邮件。"],
+   ["中途拍照","框架、打底、面料上身等关键节点拍照给客户，可以提前发现问题。"],
+   ["完成验收","业务自己先检查尺寸、做工、颜色，拍照录视频发给客户确认。"],
+   ["寄样","贴好标签，发运单号，同时附上样品报价和装柜量。"],
+   ["收集反馈","到货后主动跟进，把修改意见写成改样单，改到客户确认为止。"],
+   ["封样留底","确认样贴标签存档，大货按此执行。"]],
+  pits:["客户说“差不多就行”就开始做大货，结果到货后说和样品不一样。","样品寄出后不跟进，等客户主动联系，往往就没下文了。","改样时只改了客户提到的地方，没检查改动是否影响其他尺寸（比如加座深后装柜量变了）。","忘了给确认样拍照存档，出现争议时没有证据。"],
+  cases:["打样"],
+  faq:[
+   ["客户说“大公司都是免费样品”，怎么办？","可以这样回应：整套沙发成本高，所以收样品费，但下单后全额抵扣货款。对有实力、需求明确的客户，可以请示领导免样品费，只收运费。"],
+   ["样品和大货不一样，最常见的原因是什么？","大货换了面料批次（色差）、换了海绵供应商（软硬不同）、工人没按封样做。所以大货前要确认 PP 样，生产中要对照封样检查。"]]},
+ contract:{id:"contract",t:"PI 与合同条款",sub:"一张 PI 逐条看",
+  intro:"PI 签错一个字，后面生产、收款、清关都会出问题。接单时要能逐条看懂、逐条核对。",
+  pts:[
+   ["抬头信息","Header","双方公司全称、地址、联系人，PI 编号、日期。公司名要和银行收付款账户名一致。","名称不一致，收款时可能被银行退回。"],
+   ["产品明细","Product Details","款号、图片、尺寸（W×D×H）、材料（框架、海绵、面料编号和颜色）、数量、单价、总价。","面料要写供应商编号和颜色名，不能只写“grey fabric”。"],
+   ["价格条款","Trade Term","写成“FOB Shenzhen”“CIF Los Angeles”这样的完整形式，并写明 Incoterms 2020。",""],
+   ["付款条款","Payment Terms","如“30% T/T deposit, 70% balance against copy of B/L”。写清比例、方式、节点。",""],
+   ["交期","Delivery Time","常写“45–60 days after receipt of deposit and confirmation of PP sample”，从定金和产前样确认两个条件都满足后开始算。","只写“45 days”会让客户以为从签单开始算。"],
+   ["包装与唛头","Packing & Marking","包装方式、每套箱数、外箱尺寸、唛头（Shipping Mark）内容，客户是否要贴自己的标签或条码。",""],
+   ["质量与验货","Quality & Inspection","按确认样或封样生产，验货方（我方 QC 或客户指定第三方）和 AQL 标准，测试要求和费用承担。",""],
+   ["其他条款","Others","允许数量误差（如 ±3%）、分批出货是否允许、银行信息、有效期、索赔期限（如到货 30 天内提出）。",""]],
+  steps:[
+   ["对照报价和邮件","把 PI 的每一项和最后一版报价、客户邮件里的确认内容逐条对照。"],
+   ["跟生产、采购确认","交期、面料库存、特殊工艺先问一遍，确认做得到再发。"],
+   ["领导审核","新人发 PI 前一般要主管审核价格和条款。"],
+   ["发客户签字","请客户签字盖章回传，或回复邮件明确确认。"],
+   ["客户 PO 和 PI 对比","如果客户另发采购单（PO），要逐条比对，有不一致立刻提出。"],
+   ["转内部生产单","定金到账后，把 PI 内容转成生产单，发给跟单和生产。"]],
+  pits:["PI 里的交期没写“从定金到账和样品确认后开始算”，客户按签单日追交期。","客户 PO 上的面料编号和 PI 不同，没发现就按 PI 生产了。","银行账户信息抄错一位，客户付款被退回，耽误几天。","口头答应的免费配件、特殊包装没写进 PI，生产部门不知道。"],
+  cases:["下单"],
+  faq:[
+   ["客户不肯签 PI，只是邮件说“OK, go ahead”，能开工吗？","邮件确认有一定效力，但最稳妥的是等定金到账再开工。定金到账本身就是对 PI 的实际确认。"],
+   ["为什么要写“允许数量误差 ±3%”？","沙发生产或装柜时可能有几套误差，写上可以避免客户因为少了一两套就拒收或扣款。"]]},
+ lc:{id:"lc",t:"信用证实操",sub:"审证、改证、交单",
+  intro:"信用证的原则是“单证相符”：银行只看单据，不看货。所以做信用证就是和单据的每一个字较真。",
+  pts:[
+   ["开证流程","L/C Process","买方向开证行申请开证 → 通知行（卖方银行）通知卖方 → 卖方审证 → 发货 → 按信用证要求制单交给银行 → 银行审单相符后付款。",""],
+   ["即期和远期","At Sight / Usance","即期信用证单据相符后马上付款；远期（如见单后 90 天）要等到期才付。",""],
+   ["关键日期","Key Dates","最迟装运日（Latest Shipment Date）、交单期（常见装运后 21 天内）、有效期（Expiry Date）。三个日期都要来得及。",""],
+   ["软条款","Soft Clause","卖方无法控制的条款，如“须由开证申请人签发的验货证书”。客户不签，卖方就拿不到钱。看到这种条款要求删改。",""],
+   ["不符点","Discrepancy","单据和信用证不一致。银行会扣不符点费，甚至拒付，只能等买方同意接受不符点。",""]],
+  steps:[
+   ["收证当天审证","对照合同核对：受益人名称地址、金额、货描、数量、价格条款、装运港和目的港、装运日期、有效期、所需单据。"],
+   ["列出做不到的条款","比如装运期太紧、要求的证书我们拿不到、软条款。"],
+   ["一次性要求改证","把所有问题一次发给客户改，改证要收费，多次改费时费钱。"],
+   ["按证制单","商业发票、装箱单、提单、产地证、保险单等，按信用证原文的拼写和格式。"],
+   ["交单前全部复核","最好由两个人各核对一次，再交给银行。"],
+   ["跟进银行","跟进是否有不符点，有的话马上联系客户接受。"]],
+  pits:["信用证里公司英文名少了“Co., Ltd.”，没改证，交单时成了不符点。","最迟装运日赶不上，但以为客户会通融，没提前改证。","发票上的货描自己“优化”了措辞，和信用证原文不一致。"],
+  cases:["付款"],
+  faq:[
+   ["信用证是不是 100% 安全？","不是。前提是单证相符，而且开证行信用可靠。有软条款、开证行所在国家风险高、单据有不符点，都可能收不到钱。"],
+   ["不符点一定收不到钱吗？","不一定。银行会征求买方意见，买方接受就能付款，但会扣不符点费，而且主动权到了买方手里。"]]},
+ docs:{id:"docs",t:"单证清单与审单",sub:"每票货要什么单、怎么核对",
+  intro:"一票货出去要准备一整套单据，每一份都要数字一致：品名、数量、箱数、毛重、体积、金额。",
+  pts:[
+   ["商业发票","Commercial Invoice","卖方、买方、发票号、日期、品名、数量、单价、总价、价格条款、原产地。进口清关和计算关税用。",""],
+   ["装箱单","Packing List","每款的箱数、每箱尺寸、净重、毛重、体积、总计。要和发票数量一致。",""],
+   ["提单","Bill of Lading","托运人（Shipper）、收货人（Consignee）、通知方（Notify Party）、船名航次、装运港、目的港、柜号封条号、件数毛重体积。","收货人写“To order”时是指示提单，可以背书转让。"],
+   ["原产地证","Certificate of Origin","一般原产地证，或自贸协定项下的优惠原产地证（按目的国是否有优惠）。",""],
+   ["熏蒸证明","Fumigation Certificate","含实木包装（如木托盘、木箱）的货物，多国要求熏蒸处理，并在木包装上打 IPPC 标识。沙发内部的加工木框一般不需要，但要看客户和目的国要求。",""],
+   ["美国特有","ISF / AMS","出口美国要提前向美国海关申报 ISF（Importer Security Filing，俗称 10+2）等信息，一般在装船前 24 小时以上完成，由客户或货代负责，但需要工厂提供资料。","资料晚了可能被美国海关罚款。"],
+   ["欧盟特有","ENS / EORI","进入欧盟需提前做入境安全申报（ENS），进口商要有 EORI 号码，一般由客户和货代处理。",""]],
+  steps:[
+   ["收齐原始数据","装柜后拿到实际箱数、毛重、柜号、封条号。"],
+   ["做发票和装箱单","用实际装柜数据，而不是计划数。"],
+   ["核对提单草稿","货代发来提单草稿（Draft B/L），对照发票、装箱单和客户要求逐项核对。"],
+   ["申请其他证书","产地证、熏蒸证明等按需申请。"],
+   ["发客户确认","把全套单据扫描件发客户确认，有问题在出正本前修改。"],
+   ["放单","按收款情况安排电放或寄正本。"]],
+  pits:["装箱单总箱数和提单件数不一致。","提单收货人写错，改单要付改单费，严重时影响提货。","拿计划数量做单，装柜时少装了两套，没更新单据。"],
+  cases:["出货"],
+  faq:[
+   ["提单草稿要重点看什么？","收货人和通知方、品名、件数、毛重体积、柜号封条号、装运港目的港、运费条款（Freight Prepaid 或 Collect，要和价格条款匹配：FOB 一般是 Collect，CIF/CFR 是 Prepaid）。"],
+   ["单据上的数字不一致会怎样？","客户清关可能被海关查验、延误，信用证下会成为不符点，影响收款。"]]},
+ claim:{id:"claim",t:"售后与索赔处理",sub:"判断责任、给方案、防再犯",
+  intro:"售后处理得好，一次投诉能变成更长期的合作；处理不好，客户直接流失，还可能被扣款。",
+  pts:[
+   ["常见索赔类型","Claim Types","运输破损、少货、色差、做工问题（开线、异响）、尺寸不符、使用后质量问题（海绵塌陷、面料起球）、合规问题（标签缺失）。",""],
+   ["责任判断","Liability","看证据：装柜照片、验货报告、封样、到货时的开箱照片、提单上的批注。运输破损要看是包装不够还是运输暴力操作。","CIF 下运输破损，客户可凭保险向保险公司索赔。"],
+   ["解决方式","Solutions","补发配件或面料、当地维修（给维修费）、按比例给折扣、下单抵扣、极少数情况退货。","整柜退货运费很高，实务中少见。"],
+   ["预防","Prevention","把每次索赔的原因记下来，反馈给生产和包装，下次改进。","客户很看重你是否改进，而不是只看赔多少。"]],
+  steps:[
+   ["当天回复","表示重视，说明会在 24–48 小时内给方案，不急于承认或否认责任。"],
+   ["收集证据","请客户提供照片、视频、数量、柜号、订单号、外箱唛头照片。"],
+   ["内部排查","调出装柜照片、验货报告、生产记录，和生产、QC 一起判断原因。"],
+   ["和领导商量方案","按责任和订单金额定方案，要有上限和时间。"],
+   ["给客户方案","说明原因、解决方案、时间、以后的改进措施。"],
+   ["执行并确认结案","方案执行完请客户确认，记录到客户档案。"]],
+  pits:["客户一投诉就马上答应赔钱，没有核实数量和原因。","只说“这不是我们的问题”，没给证据也没给方案。","处理完不复盘，下个订单同样的问题再次出现。"],
+  cases:["售后"],
+  faq:[
+   ["客户说“10% 的货有问题，要求折价 20%”，怎么谈？","先核实问题的数量和严重程度（照片、清单）。按实际受影响的数量和维修成本算补偿，而不是按客户说的比例。可以提出补发配件加小额折扣，或在下一单抵扣。"],
+   ["索赔期限为什么要写进 PI？","避免客户几个月后才提出问题，那时很难判断是生产问题还是使用问题。常见写法：到货后 30 天内提出书面索赔。"]]},
+ email:{id:"email",t:"商务英语邮件写法",sub:"结构、语气、常用句",
+  intro:"外贸 90% 的沟通靠邮件。好邮件的标准是：客户一眼看出你要说什么、要他做什么。",
+  pts:[
+   ["标题","Subject","写清订单号和主题，如“PO#4521 – Production update & inspection date”。客户每天几百封邮件，标题决定会不会被打开。",""],
+   ["结构","Structure","一句寒暄 → 结论 → 细节（用编号列出）→ 需要客户做什么 → 结尾。",""],
+   ["一封邮件一件事","One Topic","不同订单、不同事情分开写，方便客户转发和查找。",""],
+   ["语气","Tone","礼貌、直接、肯定。避免“maybe”“I think”太多，显得不专业；也避免命令式的“You must”。","坏消息：We regret to inform you… 请求：Could you please… 确认：Please kindly confirm…"],
+   ["回复速度","Response Time","24 小时内一定回。暂时没答案也先回：“Well received. We are checking with our production team and will reply by tomorrow.”",""],
+   ["即时通讯","WhatsApp / WeChat","很多欧美客户也用 WhatsApp 沟通。重要内容（价格、交期、变更）聊完后要用邮件再确认一次留档。",""]],
+  extra:`<section class="block"><h3>常用句型速查</h3><div class="tw"><table class="t"><tr><th>场景</th><th>英文</th><th>中文</th></tr>
+  <tr><td>确认收到</td><td>Well received with thanks.</td><td>已收到，谢谢。</td></tr>
+  <tr><td>附件</td><td>Please find attached the updated quotation.</td><td>附件是更新后的报价。</td></tr>
+  <tr><td>请求确认</td><td>Please kindly confirm the fabric color by Friday.</td><td>请在周五前确认面料颜色。</td></tr>
+  <tr><td>跟进</td><td>Just following up on my email of May 10 regarding…</td><td>跟进一下我 5 月 10 日关于……的邮件。</td></tr>
+  <tr><td>说明延误</td><td>Due to a delay in fabric delivery, the shipment will be postponed to…</td><td>由于面料延迟到货，出货将推迟到……</td></tr>
+  <tr><td>道歉</td><td>We sincerely apologize for the inconvenience caused.</td><td>给您带来不便，我们深表歉意。</td></tr>
+  <tr><td>拒绝</td><td>Unfortunately, we are unable to accept… However, we could…</td><td>很遗憾我们无法接受……不过我们可以……</td></tr>
+  <tr><td>催款</td><td>Kindly arrange the balance payment so that we can release the B/L.</td><td>请安排尾款，以便我们放单。</td></tr></table></div></section>`,
+  pits:["一封邮件回答了客户五个问题中的三个，客户还得再问。","附件忘了加，或文件名乱（如“新建文档(3).pdf”）。","长时间不回，等有完整答案才回复。"],
+  cases:["询盘","议价","生产"],
+  faq:[
+   ["客户邮件里有 5 个问题，怎么回最清楚？","按客户的顺序编号逐条回答，可以直接引用客户的问题，再在下面写答案。暂时答不了的写明什么时候回复。"],
+   ["WhatsApp 上客户确认了颜色，还要发邮件吗？","要。聊天记录容易丢、不好查，也不方便给同事转交。重要确认用邮件留档，写明“As discussed on WhatsApp…”。"]]}
+};
+GROUPS[1].mods.push(NEW_MODS.sample);
+GROUPS[2].mods.unshift(NEW_MODS.contract);GROUPS[2].mods.push(NEW_MODS.lc);
+GROUPS[4].mods.splice(1,0,NEW_MODS.docs);GROUPS[4].mods.push(NEW_MODS.claim);
+GROUPS[6].mods.push(NEW_MODS.email);
+
+/* ===== 实操扩展：给原有模块加步骤和坑 ===== */
+const ADD={
+ flow:{steps:[
+   ["第 0 天","签 PI、收 30% 定金。定金到账才算正式开始。"],
+   ["第 1–3 天","下内部生产单，给面料、海绵、五金供应商下采购单。"],
+   ["第 15–25 天","面料到厂，验布、对色，和封样比对。"],
+   ["第 20–25 天","做产前样（PP 样），拍照或寄给客户确认。"],
+   ["第 25–45 天","大货生产。每周给客户发一次进度。"],
+   ["第 35 天前后","订舱：FOB 下联系客户指定货代，CIF 下自己找货代。"],
+   ["第 40 天前后","中期检验，发现问题及时返工。"],
+   ["第 45 天前后","尾期验货，合格后安排装柜。"],
+   ["装柜当天","拍装柜照片，记录柜号、封条号。"],
+   ["开船后","做单据，发提单副本给客户催尾款，到账后放单。"],
+   ["开船后 1–2 月","办出口退税；客户到货后跟进反馈。"]],
+  pits:["以为签了 PI 就开工，结果定金一直没到，材料已经买了。","只关心交期，没提前订舱，旺季订不到船。","出货后就不管了，没跟进客户到货情况，错过复购机会。"],cases:["生产"]},
+ product:{steps:[
+   ["看样品时从外往里看","面料和缝线 → 坐感和回弹 → 翻过来看底布、框架、弹簧 → 看脚和五金。"],
+   ["记下每款的配置表","框架材料、弹簧类型、海绵密度、面料编号、包装尺寸，做成自己的产品手册。"],
+   ["跟一整条生产线","开料、框架、打底、裁剪缝纫、扪皮、包装各站一天，知道每道工序会出什么问题。"],
+   ["认识面料供应商","知道常用面料的价格区间、交期、最小起订量和色卡。"]],
+  pits:["客户问配置时凭印象回答，结果和实际生产不符。","不知道改尺寸会影响包装和装柜量，报价时忘了重算。"]},
+ inco:{steps:[
+   ["报价时写完整","写成“FOB Shenzhen, Incoterms 2020”，不要只写“FOB”。"],
+   ["FOB 下拿到客户货代信息","问客户要指定货代的联系人，提前沟通订舱和截关时间。"],
+   ["确认本地费用谁付","FOB 下装运港的码头操作费（THC）等一般由卖方承担，事先和货代确认费用清单。"],
+   ["CIF 下自己询运价","找 2–3 家货代比价，报价时写“based on current freight”。"]],
+  pits:["FOB 报价后，客户货代把目的港费用也算到工厂头上。","报 CIF 时用了过期运价，出货时运费涨了，利润没了。"],cases:["出货"]},
+ pay:{steps:[
+   ["发 PI 时写清银行信息","收款行名称、SWIFT 代码、账号、账户名，和公司名一致。"],
+   ["客户付款后要水单","请客户发银行付款凭证（bank slip / remittance advice），方便查款。"],
+   ["和财务确认到账","以财务确认到账为准，不以客户的水单为准。"],
+   ["注意银行手续费","跨境汇款会被中间行扣费，PI 里可写“all bank charges outside China are for buyer's account”。"],
+   ["尾款到账后再放单","电放或寄正本前再次和财务确认。"]],
+  pits:["看到客户发来的水单就放单，结果钱没到（水单可能被取消或伪造）。","客户少付了几十美元手续费，没提前约定，不知道找谁补。"],cases:["付款","收款风险"]},
+ quote:{steps:[
+   ["确认客户需求","款式、尺寸、面料、数量、目的港、价格条款。"],
+   ["向工厂或成本部门要成本","说清配置，拿到含税出厂价和包装尺寸。"],
+   ["算装柜量和运费","有 CIF 需求时向货代询运价。"],
+   ["套公式算价","加上杂费、减去退税、除以利润率和汇率。"],
+   ["做报价单","用公司模板，带图片和完整参数，写有效期。"],
+   ["主管审核后发出","新人报价前一般要审核，尤其是新客户和大单。"]],
+  pits:["只报了单价，没写包装尺寸和装柜量，客户算不出到岸成本。","客户要改面料，报价时没重新询面料价。","报价写了“USD 248”，但没写价格条款和有效期。"],cases:["询盘","议价"]},
+ load:{steps:[
+   ["装柜前一天","确认货物全部包装完成、唛头贴好、验货通过。"],
+   ["做装柜计划","重的放下面、先卸的放门口、混装时按款式分区。"],
+   ["拖车到厂","核对柜号，检查空柜是否干净、干燥、无破洞，拍空柜照。"],
+   ["装柜过程","装一半、装满时拍照；缝隙用填充物塞紧，防止运输中晃动。"],
+   ["封柜","拍关门和封条号照片，记录实际装柜数量。"]],
+  pits:["箱子之间空隙太大没塞紧，海上颠簸导致外箱压坏。","没核对柜号，装错了柜。","实际装柜数量和计划不同，单据没改。"],cases:["出货"]},
+ logi:{steps:[
+   ["开船前 2–3 周","订舱，确认船期（ETD）、截关时间（Cut-off）、截单时间（SI Cut-off）。"],
+   ["拿到订舱确认后","安排拖车时间，提供装柜地址。"],
+   ["装柜后","提交提单补料（SI，Shipping Instruction）和 VGM（集装箱核实总重）。"],
+   ["截关前","完成出口报关，货柜进码头。"],
+   ["开船后","核对提单草稿，确认后出提单；给客户发船期信息和单据副本。"],
+   ["到港前","提醒客户准备清关，跟进 ETA（预计到港时间）。"]],
+  pits:["错过截关时间，货柜被甩到下一班船（甩柜，rolled over）。","补料信息错误，出提单后改单要收费。","没提醒客户美国 ISF 申报时间，客户被罚款。"],cases:["出货"]},
+ qc:{steps:[
+   ["生产前","对照封样确认面料、海绵、五金是否到齐，颜色是否一致。"],
+   ["生产第一批","首件检查：第一套大货做好后对照封样检查。"],
+   ["生产中","每周去车间看进度，拍照发给客户。"],
+   ["中期检验","重点看框架、打底、车线等后期看不到的地方。"],
+   ["尾期验货","预约 QC 或第三方，准备好验货资料（PI、封样、包装要求）。"],
+   ["验货不合格","出返工计划，返工后申请复验。"]],
+  pits:["只在尾期验货才发现问题，已经来不及返工。","第三方验货时样品、资料没准备好，验货员无法判定，白跑一趟还要付费。"],cases:["生产","验货"]},
+ comp:{steps:[
+   ["接单时问清","问客户：目的国、销售渠道（零售、电商）、需要哪些测试和标签。"],
+   ["确定测试项目和机构","按客户要求找 SGS、Intertek、BV 等机构报价。"],
+   ["寄测","用大货材料（面料、海绵）送测，不能用样品材料。"],
+   ["拿到报告","合格后发客户，并存档，报告有有效期。"],
+   ["做标签","按法规做阻燃标签、成分标签、警示标签，贴在指定位置。"]],
+  pits:["用样品面料送测，大货换了供应商，报告无效。","不知道英国阻燃要求更严，按美国标准的材料接了英国订单。"],cases:["跨文化"]},
+ market:{cases:["跨文化","维护"]},
+ dev:{steps:[
+   ["确定目标客户类型","例如美国中型家具零售商、电商卖家。"],
+   ["找名单","展会名录、Google、LinkedIn、海关数据。"],
+   ["研究每个客户","看官网卖什么款式、什么价位，找采购负责人。"],
+   ["写针对性开发信","提到对方的产品，给出匹配的款式。"],
+   ["记录和跟进","用表格或 CRM 记录发送日期、回复情况，按计划跟进。"]],
+  pits:["同一封开发信群发几百个邮箱，被当成垃圾邮件。","没有记录，忘了跟进，或重复给同一个客户发。"],cases:["询盘","维护"]},
+ nego:{cases:["议价","维护","跨文化"]},
+ risk:{cases:["收款风险"]}
+};
+GROUPS.forEach(g=>g.mods.forEach(m=>{if(ADD[m.id])Object.assign(m,ADD[m.id])}));
+
+/* ===== 客户情景案例 ===== */
+const CASES=[
+ {id:"c1",cat:"询盘",title:"只要一张价格表的询盘",bg:"阿里巴巴国际站收到一个美国客户的询盘，邮箱是公司域名，官网显示是一家有 6 家门店的家具零售商。",
+  mail:`Hi,
+Please send me your price list for sofas.
+Thanks,
+Mike`,task:"写一封回复，既给出有用信息，又问清关键需求。",
+  think:["客户有官网和门店，是真实买家，值得认真回复。","不要发全部价格表：几百个款式的价格表容易被拿去比价，而且客户看不过来。","先推 3–5 款适合对方门店风格的产品，给价格区间。","问 2–3 个关键问题：感兴趣的款式、预计数量、目的港。"],
+  reply:`Subject: Sofa collection & prices for [Store Name]
+
+Hi Mike,
+
+Thank you for your inquiry.
+
+I checked your website and noticed you carry modern
+fabric sofas. Attached are 5 models that suit your
+stores, with FOB Shenzhen prices from USD 230 to 320/set.
+
+To send you an accurate quotation, could you please
+let me know:
+1. Which styles or sizes you are interested in?
+2. Your estimated quantity (e.g. 1x40HQ mixed)?
+3. Your destination port?
+
+Best regards,
+Leo`,
+  mistakes:["直接发一整本价格表，没有任何针对性。","只回一句“Please check the attachment”。","问了十几个问题，客户嫌麻烦不回。"]},
+ {id:"c2",cat:"询盘",title:"客户目标价远低于成本",bg:"英国进口商看中一款三人位沙发，你报了 FOB USD 285。客户回复说目标价是 USD 220。你的成本算下来，220 基本不赚钱。",
+  mail:`Hi Leo,
+Your price is too high. Our target is USD 220.
+Other suppliers can do it. Can you match?
+Regards,
+James`,task:"不直接拒绝，也不直接答应，把谈判往前推。",
+  think:["先弄清客户拿来比的是不是同样的规格（框架、海绵密度、面料）。","提出可以降价的规格调整方案，让客户自己选。","说明我们价格背后的价值（英国阻燃合规、品质稳定）。","用条件换价格：数量更大、付款更好可以再让一点。"],
+  reply:`Hi James,
+
+Thanks for your feedback and target price.
+
+USD 220 is below our cost for the current spec
+(35D HR foam, pocket springs, UK FR-compliant fabric).
+To get closer to your target, we could offer:
+
+Option A: Serpentine springs instead of pocket
+springs – USD 256/set
+Option B: Option A + 30D foam + fabric from our
+stock range – USD 238/set
+
+For 2x40HQ, we can take off another USD 5/set.
+
+Could you share which spec the other supplier
+quoted? I'm happy to compare it line by line.
+
+Best regards,
+Leo`,
+  mistakes:["直接降到 220 接单，利润为零甚至亏本。","回复“Sorry, we can't”就结束了。","不问对方的规格，盲目比价。"]},
+ {id:"c3",cat:"打样",title:"客户要求免费寄整套样品",bg:"一个德国新客户想看两款沙发样品，要求免费寄送。",
+  mail:`Hello,
+We are interested in models S-102 and S-215.
+Please send us free samples so we can evaluate
+the quality.
+Best,
+Anna`,task:"说明样品政策，同时不让客户觉得被拒绝。",
+  think:["整套沙发成本高、运费高，一般收样品费。","强调下单后退还样品费，降低客户的顾虑。","给替代方案：先寄面料小样和高清视频，或邀请视频看样。","运费用客户的快递账号到付，或报价给客户。"],
+  reply:`Hi Anna,
+
+Thank you for your interest in S-102 and S-215.
+
+As a full sofa is costly to make and ship, we charge
+a sample fee of USD 350 per model, which will be fully
+refunded once you place the first order of 1x40HQ.
+
+Before that, we are happy to:
+- send fabric swatches free of charge, and
+- arrange a live video call to show the samples.
+
+Sample lead time is 10 days. Shipping can go by your
+courier account or we can quote air freight.
+
+Best regards,
+Leo`,
+  mistakes:["直接说“We don't offer free samples.”，语气生硬。","为了拿单，给没有资信的新客户免费寄样，最后客户消失。"]},
+ {id:"c4",cat:"打样",title:"样品到了，客户说坐感太硬",bg:"美国客户收到样品后反馈坐感太硬，希望更软，但不想加价。",
+  mail:`Hi Leo,
+Sample received. Looks good, but the seat is too
+firm for the US market. Please make it softer.
+We can't accept a higher price.
+Thanks,
+Rachel`,task:"确认具体要改到什么程度，给出不加价或小幅加价的方案。",
+  think:["“太硬”太模糊，要确认对比对象，比如门店里某款的坐感。","坐感改软的方法：降低海绵密度或硬度、加一层软棉、座包加羽绒或纤维棉。","有的改法降成本（换软海绵），有的加成本（加羽绒），分别说明。","改好后寄座包或录视频给客户确认，并封样。"],
+  reply:`Hi Rachel,
+
+Thanks for your feedback on the sample.
+
+We can make the seat softer in two ways:
+1. Change the seat foam to a softer grade and add a
+   fiber wrap – no price change.
+2. Add a feather-and-fiber topper – plus USD 12/set.
+
+If you can share a sofa in your store whose comfort
+you like, we'll match it as closely as possible.
+
+We'll make a new seat cushion within 5 days and send
+you a video (or the cushion itself) for approval.
+
+Best regards,
+Leo`,
+  mistakes:["不问清楚就改，改完客户还是不满意。","改了坐感没封样，大货时车间还按原来的做。"]},
+ {id:"c5",cat:"议价",title:"老客户因关税要求降价 5%",bg:"合作两年的美国客户说关税上涨，要求所有产品降价 5%，否则考虑转去越南采购。",
+  mail:`Hi Leo,
+With the new tariffs, our landed cost has gone up a
+lot. We need a 5% price reduction on all items,
+otherwise we'll have to move orders to Vietnam.
+Best,
+Tom`,task:"稳住客户，同时守住利润，给出双赢方案。",
+  think:["先表示理解，这是客户真实的压力。","不要马上答应，内部核算能让多少、哪些款能让。","提供组合方案：部分款降价、调整规格、加大订单量换价格、延长付款期换价格。","强调转单的隐性成本：新供应商打样、质量风险、交期不稳。","重大价格调整要请示领导。"],
+  reply:`Hi Tom,
+
+Thank you for sharing this openly. We understand the
+pressure the new tariffs put on your business, and we
+want to support you.
+
+After reviewing with our management, we propose:
+1. 3% reduction on your top 5 models from the next PO.
+2. Value-engineering on the other models (e.g. packing
+   and foam spec) to save 3–6% without changing the look.
+3. A further 1% if the annual volume reaches 20x40HQ.
+
+We'd also like to keep the consistency you've had with
+us: stable quality, on-time shipment and quick sampling.
+
+Could we schedule a call this week to go through it?
+
+Best regards,
+Leo`,
+  mistakes:["直接答应全部降 5%，利润被吃光。","强硬拒绝，客户真的转去越南。","自己拍板价格，没请示领导。"]},
+ {id:"c6",cat:"付款",title:"客户要求改为到港后付尾款",bg:"合作过两单的客户要求把付款方式从“30% 定金 + 70% 见提单副本付”改为“30% 定金 + 70% 货到港后付”。",
+  mail:`Hi Leo,
+For the next order, we'd like to pay the 70% balance
+upon arrival of goods at the destination port.
+This will help our cash flow.
+Regards,
+Chris`,task:"评估风险，给出折中方案。",
+  think:["到港后付款，意味着货已经在海上，如果客户不付，我们处境很被动（货在国外，退运费用高）。","先查客户过去付款是否准时、公司规模和资信。","可以给折中方案：提高定金比例、部分款到港后付、购买出口信用保险。","这是公司政策层面的决定，需要领导审批。"],
+  reply:`Hi Chris,
+
+Thank you for your continued orders.
+
+We appreciate your cash flow concern. After
+discussing internally, we can offer:
+- 40% deposit, 60% balance upon arrival at port; or
+- keep 30/70, but release the B/L once 50% of the
+  balance is received, and the rest within 15 days.
+
+These terms would apply once our credit insurer
+approves your company's credit line, which usually
+takes about one week.
+
+Please let me know which option works better.
+
+Best regards,
+Leo`,
+  mistakes:["为了留客户直接答应，没评估风险也没请示。","一口拒绝，没有任何替代方案。"]},
+ {id:"c7",cat:"下单",title:"客户 PO 和 PI 不一致",bg:"客户签回的采购单（PO）上，面料编号写的是 F-208，而你 PI 上写的、样品确认的是 F-280。",
+  mail:`Hi Leo,
+Please find our PO#7781 attached. Deposit will be
+sent this week.
+Thanks,
+Sarah`,task:"在付定金和开工前把差异确认清楚。",
+  think:["不能自己判断是客户笔误还是改了主意。","马上指出差异，附上 PI 和样品确认邮件截图。","在客户书面确认前，不下面料采购单。"],
+  reply:`Hi Sarah,
+
+Thank you for PO#7781.
+
+Before we proceed, please kindly confirm one
+difference:
+- PO: fabric F-208
+- Our PI and the approved sample: fabric F-280
+
+Should we follow F-280 as per the approved sample?
+We'll place the fabric order once you confirm.
+
+Best regards,
+Leo`,
+  mistakes:["没仔细核对 PO，直接按 PI 生产，客户以 PO 为准拒收。","发现了但自己判断“应该是笔误”，没有书面确认。"]},
+ {id:"c8",cat:"生产",title:"面料延误，出货要推迟两周",bg:"面料供应商通知染色出问题，面料要晚 12 天到，订单原定 6 月 20 日出货。",
+  mail:`（客户还不知道，这次是你要主动写信）`,task:"主动通知客户延期，并尽量减少影响。",
+  think:["越早说越好，给客户留调整时间。","说清原因、新的出货日期、我们的补救措施。","可以提出分批出货：已有面料的款先出。","如果延误影响客户的销售季，可以适当给补偿（如分担部分运费），需请示领导。"],
+  reply:`Subject: PO#7781 – Shipment delay notice
+
+Hi Sarah,
+
+I'm writing to let you know about a delay on PO#7781.
+
+Our fabric supplier found a color issue in the dyeing
+batch and had to re-dye. The fabric will arrive 12 days
+later than planned.
+
+New ETD: July 2 (original: June 20)
+
+To reduce the impact, we will:
+1. Add overtime so the delay stays within 12 days.
+2. Offer partial shipment: models S-102 and S-215
+   (fabric in stock) can still ship on June 20.
+
+We sincerely apologize for the inconvenience. Please
+let me know if the partial shipment works for you.
+
+Best regards,
+Leo`,
+  mistakes:["等到出货日前两天才告诉客户。","只说“delayed”，不给原因和新日期。","把责任都推给供应商，没有补救措施。"]},
+ {id:"c9",cat:"生产",title:"生产中途客户要求改颜色",bg:"大货已开裁面料 40%，客户突然要求把其中一款的灰色改成米色。",
+  mail:`Hi Leo,
+Our buyer wants to change model S-215 from grey to
+beige. Can you do that without affecting the ship date?
+Thanks,
+Sarah`,task:"说明改动的影响，让客户在充分知情下决定。",
+  think:["先查生产状态：已裁多少、已缝多少、剩余灰色面料能否退回或用在别的订单。","米色面料有没有库存，交期多久。","把影响说清楚：额外费用（已裁面料的损失）、交期延长。","让客户书面确认改动和费用。"],
+  reply:`Hi Sarah,
+
+Thanks for letting us know.
+
+Current status of S-215 (60 sets):
+- 24 sets: grey fabric already cut
+- 36 sets: not started
+
+Options:
+A. Change only the 36 unstarted sets to beige.
+   Beige fabric is in stock – no delay, no extra cost.
+B. Change all 60 sets. The 24 cut grey sets can't be
+   reused, so there will be a fabric cost of USD 480,
+   and the ship date moves back by 7 days.
+
+Please confirm your choice in writing, and we'll
+arrange it right away.
+
+Best regards,
+Leo`,
+  mistakes:["口头答应“没问题”，最后既延期又多出费用，客户不认账。","不查生产状态就直接拒绝。"]},
+ {id:"c10",cat:"验货",title:"第三方验货不合格",bg:"客户指定 QIMA 验货，结果 FAIL：主要缺陷超标（线头、个别车线不直），另有 2 套色差。",
+  mail:`Hi Leo,
+The inspection result is FAIL. Please advise your
+corrective action and a re-inspection date ASAP.
+Our container booking is next Monday.
+Regards,
+Sarah`,task:"给出返工计划和复验时间，尽量不影响船期。",
+  think:["先看验货报告，确认具体问题和数量。","线头、车线属于可返工的问题，安排全检返工（100% check），不只是返工抽到的那几套。","色差 2 套：换面料重做或挑出来不出货，看数量是否影响订单。","复验费用通常由工厂承担，要预算进去。","给出明确的时间表，并说明以后如何预防。"],
+  reply:`Hi Sarah,
+
+Thank you for the report. We take it seriously.
+
+Corrective actions:
+1. 100% re-check of all 120 sets for loose threads
+   and stitching, starting today.
+2. The 2 sets with color difference will be
+   re-upholstered with fabric from the approved lot.
+3. Extra QC at the packing line to check every set.
+
+Re-work will finish on Thursday. Could you please
+book the re-inspection for Friday? We will cover the
+re-inspection fee, and the Monday loading stays on plan.
+
+Best regards,
+Leo`,
+  mistakes:["和客户争论验货员太严。","只返工验货员抽到的几套，复验再次不合格。"]},
+ {id:"c11",cat:"出货",title:"船公司甩柜，要晚一周开船",bg:"货已进码头，但船公司舱位超订，你的柜子被甩到下一班船，开船时间晚 7 天。",
+  mail:`（货代通知你后，你要写信告诉客户）`,task:"及时通知客户，说明原因和影响。",
+  think:["甩柜是船公司的原因，不是工厂的问题，但也要第一时间通知客户。","提供新的船名航次、ETD 和 ETA。","客户可能要调整仓库收货和销售计划。","以后旺季提前订舱、选择更稳定的船公司。"],
+  reply:`Subject: PO#7781 – Vessel change (rolled by carrier)
+
+Hi Sarah,
+
+Our forwarder just informed us that due to overbooking,
+the carrier has rolled container MSKU1234567 to the
+next vessel.
+
+Original: MAERSK XXX / ETD June 20 / ETA July 22
+New: MAERSK YYY / ETD June 27 / ETA July 29
+
+The cargo is already at the terminal, so no further
+delay is expected. We'll send the new B/L draft
+tomorrow.
+
+Sorry for the inconvenience, and please let me know
+if you need anything to adjust your receiving plan.
+
+Best regards,
+Leo`,
+  mistakes:["觉得不是自己的责任就不通知，客户到港日才发现。","只说“delayed”，不提供新的船期信息。"]},
+ {id:"c12",cat:"售后",title:"到货后部分沙发脚断裂、外箱破损",bg:"客户收到货，说 120 套中有 8 套外箱破损，其中 5 套沙发脚断裂。",
+  mail:`Hi Leo,
+We received the container today. 8 cartons are
+damaged, and 5 sofas have broken legs. This is
+unacceptable. What will you do?
+Tom`,task:"安抚客户，收集证据，给出解决方案。",
+  think:["先表示重视和歉意，不争论责任。","请客户提供照片：外箱破损位置、断脚、柜内卸货照片。","对比我们的装柜照片：装柜时箱子是否完好、塞得是否紧。","脚断裂是容易解决的问题：马上补发脚（可空运或随下一柜）。","如果是包装问题，改进包装：脚单独包装或加护角。"],
+  reply:`Hi Tom,
+
+I'm sorry to hear about this, and thank you for
+letting us know right away.
+
+To solve it quickly:
+1. Could you please send photos of the damaged cartons
+   and legs, plus a photo of the container when opened?
+2. We will send 5 sets of replacement legs by express
+   within 3 days, at our cost. The legs are screw-in,
+   so your team can replace them easily.
+3. For any other damage found, we'll offer repair
+   costs or credit on your next order.
+
+We'll also add separate leg boxes and corner protectors
+to prevent this on future shipments.
+
+Best regards,
+Leo`,
+  mistakes:["第一句话就说“这是运输公司的问题”。","在没看照片前就答应全部退货。"]},
+ {id:"c13",cat:"售后",title:"客户投诉用了 3 个月海绵塌陷",bg:"一个美国电商客户说，有终端消费者投诉坐垫用了 3 个月就塌陷，差评增多。",
+  mail:`Hi Leo,
+We're getting reviews saying the seat cushions sag
+after 3 months. This is hurting our ratings. We need
+a solution.
+Best,
+Rachel`,task:"找出原因，提出短期补救和长期改进。",
+  think:["请客户提供差评截图、问题数量占比、产品批次。","内部查：这批海绵的密度是否和确认的一致、供应商有没有换。","短期：给投诉的消费者补发新座包；长期：提高海绵密度或加弹簧层，下单时调整规格。","规格升级可能要加价，要和客户商量。"],
+  reply:`Hi Rachel,
+
+Thanks for raising this. Reviews matter a lot, and
+we'll treat this as a priority.
+
+Next steps:
+1. Could you share the order/batch numbers and how
+   many complaints you've received so far?
+2. We're checking the foam from that batch with our
+   supplier and will send you a density test result
+   within 3 days.
+3. Short term: we can supply replacement seat
+   cushions for affected customers.
+4. Long term: we suggest upgrading to 35D HR foam
+   with a pocket-spring core – plus USD 9/set.
+
+Best regards,
+Leo`,
+  mistakes:["直接说“这是消费者使用不当”。","不查批次和原因，就同意全额赔偿。"]},
+ {id:"c14",cat:"收款风险",title:"货已到港，客户迟迟不付尾款",bg:"货已经到目的港 5 天，客户还没付 70% 尾款，邮件回复说“最近资金紧张，下周付”。",
+  mail:`Hi Leo,
+Sorry, we have some cash flow issues this month.
+We'll pay the balance next week. Can you telex
+release the B/L first so we can avoid demurrage?
+Thanks,
+Chris`,task:"守住提单，同时推动付款。",
+  think:["绝对不能先电放，提单是我们唯一的保障。","提醒客户：货在港口会产生滞港费和滞箱费（demurrage / detention），由收货人承担，拖得越久越贵。","提出折中：先付一部分，剩下的在短期内付清，但必须全部付清才放单（或按公司政策）。","报告领导和财务，必要时联系中信保（如果投保了）。"],
+  reply:`Hi Chris,
+
+Thanks for letting us know.
+
+As per our agreement, we can release the B/L only
+after receiving the full balance. We understand the
+cash flow pressure, so to help reduce demurrage:
+- If you can pay the balance by this Friday, we will
+  release the B/L on the same day.
+- Or please pay at least 50% now and the rest by
+  Friday, and we'll release once the full amount
+  is received.
+
+Please send the bank slip once it's arranged.
+
+Best regards,
+Leo`,
+  mistakes:["心软先电放，结果客户拖了几个月甚至不付。","态度强硬威胁客户，把关系弄僵。"]},
+ {id:"c15",cat:"收款风险",title:"客户收到“我们换了收款账户”的邮件",bg:"客户发邮件问：他们收到了“你”发的邮件，说公司收款账户变更，要把尾款打到新账户。你从来没发过。",
+  mail:`Hi Leo,
+We received your email saying your bank account has
+changed. Please confirm before we pay the balance
+of USD 18,600.
+Thanks,
+Sarah`,task:"立即阻止付款，并排查邮箱安全。",
+  think:["这是典型的邮件诈骗（BEC，商业邮件诈骗）。","马上回复客户：没有换账户，不要付款，并通过电话或 WhatsApp 再确认。","让客户把诈骗邮件转发过来，查看发件地址（通常是很像的假邮箱）。","立即报告领导和 IT，修改邮箱密码，开启两步验证。","以后在 PI 和签名里写明：我们的银行账户不会通过邮件变更。"],
+  reply:`Hi Sarah,
+
+Thank you very much for checking with us first.
+
+We have NOT changed our bank account. That email was
+not sent by us. Please do NOT make any payment to
+the new account.
+
+Our bank details remain exactly as shown on PI-2026-018.
+I'll also call you on WhatsApp now to confirm.
+
+Could you please forward us the fake email (with the
+full sender address)? We'll report it and secure our
+email system.
+
+Best regards,
+Leo`,
+  mistakes:["只在同一封邮件线程里回复，但邮箱可能已被盗，骗子能看到。","没有报告公司，其他客户也可能收到同样的诈骗邮件。"]},
+ {id:"c16",cat:"维护",title:"老客户半年没下单",bg:"一个英国客户去年下了 4 个柜，今年半年没有新订单，邮件也很少回。",
+  mail:`（没有来信，你要主动联系）`,task:"找出原因，重新激活客户。",
+  think:["先分析原因：市场不好？找了新供应商？上一单有问题？","不要只发“Any new orders?”。","带去有价值的信息：新品、适合英国市场的款式、价格调整、库存面料。","可以邀请客户参加展会或视频看新品。"],
+  reply:`Subject: New boucle & corduroy sofas for UK market
+
+Hi James,
+
+Hope business is going well.
+
+We've just launched 4 new models for the UK market –
+boucle and corduroy, all FR-compliant (UK FFR 1988),
+with KD packing to fit 50+ sets per 40HQ.
+
+Photos and prices are attached. We'll also be at the
+Shanghai furniture fair in September – would you
+like to meet there?
+
+Also, if anything in our last order could have been
+better, I'd really like to hear it.
+
+Best regards,
+Leo`,
+  mistakes:["直接问“Why no order?”，让客户有压力。","每周群发同样的促销邮件。"]},
+ {id:"c17",cat:"跨文化",title:"德国客户逐条质疑测试报告",bg:"德国客户收到你的面料测试报告，提出了很多细节问题：测试日期、样品是否为大货材料、测试标准版本。",
+  mail:`Dear Mr. Leo,
+Regarding the test report: 1) The test date is 14
+months ago. 2) Was the sample taken from the bulk
+fabric? 3) Which version of the standard was used?
+Please answer each point.
+Kind regards,
+Klaus Weber`,task:"逐条、准确地回答，体现专业和严谨。",
+  think:["德国客户重视细节和准确，要逐条对应回答，不要含糊。","如实说明情况：报告是否过期、是否用大货材料。","如果报告确实不符合要求，主动提出重新送测，并说明时间。","称呼用正式的“Dear Mr. Weber”。"],
+  reply:`Dear Mr. Weber,
+
+Thank you for your careful review. Please find our
+answers below:
+
+1) Test date: Correct, the report is 14 months old.
+   We will re-test with the bulk fabric for your order.
+2) Sample source: The previous test used sample fabric,
+   not bulk. The new test will use fabric from the
+   production lot, sealed by our QC.
+3) Standard: The report refers to [standard and year].
+   Please let us know if you require a different version.
+
+The new report will be ready in about 10 working days.
+We will send it to you before shipment.
+
+Kind regards,
+Leo`,
+  mistakes:["笼统回答“The report is valid, no problem.”","用太随意的语气，比如“Hi Klaus”。"]},
+ {id:"c18",cat:"跨文化",title:"英国客户说“quite good”",bg:"你给英国客户寄了新款样品，客户回复很短。",
+  mail:`Hi Leo,
+Thanks, the sample is quite good. We'll have a think
+and come back to you.
+Cheers,
+James`,task:"读懂客户的真实态度，推动下一步。",
+  think:["英式表达委婉，“quite good”往往是“还可以，但不太满意”，“have a think”可能意味着兴趣一般。","主动问具体的改进意见，给客户提意见的台阶。","提出具体的选项（面料、价格、尺寸），降低客户回复的难度。"],
+  reply:`Hi James,
+
+Thanks for taking the time to look at the sample.
+
+To make sure it's right for your customers, is there
+anything you'd like us to adjust? For example:
+- a softer or firmer seat,
+- a different fabric or color, or
+- a smaller size for UK living rooms.
+
+Happy to make a revised sample quickly if needed.
+
+Cheers,
+Leo`,
+  mistakes:["以为客户很满意，只等着客户下单。","反复催“When can you order?”"]}
+];
+const CAT_ORDER=["全部","询盘","打样","议价","下单","付款","生产","验货","出货","售后","收款风险","维护","跨文化"];
+function renderCases(cat="全部",focus){
+  const el=document.getElementById("cases");
+  const list=CASES.filter(c=>cat==="全部"||c.cat===cat);
+  el.innerHTML=`<div class="head"><div><h2>客户情景案例</h2><p class="lead">共 ${CASES.length} 个真实工作中会遇到的情景。先读客户来信，自己想怎么处理、写一版回复，再点开思路和参考回复对照。案例中的人名、公司名和数字都是虚构的。</p></div></div>
+  <div class="chips">${CAT_ORDER.map(c=>`<button class="chip ${c===cat?'on':''}" data-cat="${c}">${c}${c==="全部"?"":" "+CASES.filter(x=>x.cat===c).length}</button>`).join("")}</div>
+  ${list.map(c=>`<article class="case" id="${c.id}"><span class="tag">${c.cat}</span><h3>${c.title}</h3>
+   <div class="k">背景</div><p>${c.bg}</p>
+   <div class="k">客户来信</div><div class="email">${c.mail}</div>
+   <div class="k">你的任务</div><p>${c.task}</p>
+   <details><summary>查看处理思路</summary><ul>${c.think.map(t=>`<li>${t}</li>`).join("")}</ul></details>
+   <details><summary>查看参考回复</summary><div class="email">${c.reply}</div></details>
+   <details><summary>查看常见错误</summary><ul>${c.mistakes.map(t=>`<li>${t}</li>`).join("")}</ul></details>
+  </article>`).join("")}`;
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>renderCases(b.dataset.cat));
+  if(focus){const t=document.getElementById(focus);if(t)t.scrollIntoView({block:"start"})}
+}
+
+const MODS=GROUPS.flatMap(g=>g.mods);
+let done=S.get("doneMods",[]),cur=S.get("curMod","role");
+if(!MODS.find(m=>m.id===cur))cur="role";
+
+function setNav(o){const a=document.querySelector("aside");a.classList.toggle("open",o);document.getElementById("navToggle").setAttribute("aria-expanded",o);document.getElementById("navArrow").textContent=o?"收起 ▴":"展开 ▾"}
+document.getElementById("navToggle").onclick=()=>setNav(!document.querySelector("aside").classList.contains("open"));
+function renderNav(){
+  const nav=document.getElementById("nav");let n=0;
+  nav.innerHTML=GROUPS.map(g=>`<div class="group"><div class="label">${g.name}</div>${g.mods.map(m=>{n++;return `<button class="mod ${m.id===cur?'on':''}" data-id="${m.id}"><span class="n">${String(n).padStart(2,"0")}</span><span>${m.t}</span><span class="dot ${done.includes(m.id)?'done':''}"></span></button>`}).join("")}</div>`).join("");
+  nav.querySelectorAll(".mod").forEach(b=>b.onclick=()=>{setNav(false);cur=b.dataset.id;S.set("curMod",cur);renderNav();renderLearn();show("learn");window.scrollTo(0,0)});
+  const cm=MODS.find(m=>m.id===cur);document.getElementById("curName").textContent=cm?cm.t:"";
+  document.getElementById("pct").textContent=done.length+" / "+MODS.length;
+  document.getElementById("bar").style.width=(done.length/MODS.length*100)+"%";
+}
+const faqHTML=(list,pre="")=>list.map((f,i)=>`<details class="faq"><summary><span class="q">Q${pre}${i+1}</span><span>${f[0]}</span><span class="hint">查看答案</span></summary><div class="a">${f[1]}</div></details>`).join("");
+function bindFaq(root){root.querySelectorAll("details.faq").forEach(d=>d.ontoggle=()=>{d.querySelector(".hint").textContent=d.open?"收起":"查看答案"})}
+
+function renderLearn(){
+  const el=document.getElementById("learn");const i=MODS.findIndex(m=>m.id===cur);const m=MODS[i];
+  const g=GROUPS.find(g=>g.mods.includes(m));
+  el.innerHTML=`
+  <div class="head"><div><span class="tag">${String(i+1).padStart(2,"0")} · ${g.name.split("·")[1].trim()}</span><h2 style="margin-top:6px">${m.t}</h2><p class="lead">${m.intro}</p></div>
+  <button class="btn ${done.includes(m.id)?'ghost':''}" id="mark">${done.includes(m.id)?'已掌握 ✓':'标记为已掌握'}</button></div>
+  <section class="block"><h3>知识点 <small>${m.pts.length} 个</small></h3><div class="points">${m.pts.map(p=>`<div class="pt"><h4>${p[0]}<span class="en">${p[1]}</span></h4><div><p>${p[2]}</p>${p[3]?`<div class="eg"><b>举例 / 提示</b>　${p[3]}</div>`:""}</div></div>`).join("")}</div></section>
+  ${m.steps?`<section class="block"><h3>实操步骤 <small>按顺序做</small></h3><ol class="steps">${m.steps.map((s,k)=>`<li><span class="sn">${String(k+1).padStart(2,"0")}</span><span class="sw">${s[0]}</span><span>${s[1]}</span></li>`).join("")}</ol></section>`:""}
+  ${m.extra||""}
+  ${m.pits?`<section class="block"><h3>新人常踩的坑</h3><ul class="pits">${m.pits.map(p=>`<li>${p}</li>`).join("")}</ul></section>`:""}
+  ${m.cases?`<section class="block"><h3>相关情景案例</h3><div class="row" style="justify-content:flex-start">${CASES.filter(c=>m.cases.includes(c.cat)).map(c=>`<button class="btn ghost" data-case="${c.id}">${c.title}</button>`).join("")}</div></section>`:""}
+  <section class="block"><h3>常见问题 <small>先想，再点开</small></h3>
+   <div class="faqbar"><button class="btn ghost" id="openall">全部展开</button><button class="btn ghost" id="closeall">全部收起</button></div>
+   <div id="faqs">${faqHTML(m.faq)}</div></section>
+  <div class="pager">${i>0?`<button class="btn ghost" data-go="${MODS[i-1].id}">← ${MODS[i-1].t}</button>`:"<span></span>"}${i<MODS.length-1?`<button class="btn" data-go="${MODS[i+1].id}">下一节：${MODS[i+1].t} →</button>`:""}</div>`;
+  bindFaq(el);
+  document.getElementById("openall").onclick=()=>el.querySelectorAll("details.faq").forEach(d=>d.open=true);
+  document.getElementById("closeall").onclick=()=>el.querySelectorAll("details.faq").forEach(d=>d.open=false);
+  document.getElementById("mark").onclick=()=>{done=done.includes(m.id)?done.filter(x=>x!==m.id):[...done,m.id];S.set("doneMods",done);renderNav();renderLearn()};
+  el.querySelectorAll("[data-case]").forEach(b=>b.onclick=()=>{show("cases");renderCases("全部",b.dataset.case)});
+  el.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{cur=b.dataset.go;S.set("curMod",cur);renderNav();renderLearn();window.scrollTo(0,0)});
+}
+
+function renderAllFaq(){
+  const el=document.getElementById("allfaq");
+  const total=MODS.reduce((s,m)=>s+m.faq.length,0);
+  el.innerHTML=`<div class="head"><div><h2>常见问题总览</h2><p class="lead">共 ${total} 题，按学习顺序排列。适合面试前一天集中自测：先自己回答，再点开核对。</p></div></div>
+  <input class="search" id="fq" placeholder="搜索问题，例如：信用证、FOB、延期">
+  <div id="fl" style="margin-top:16px"></div>`;
+  const draw=(k="")=>{document.getElementById("fl").innerHTML=MODS.map((m,i)=>{const l=m.faq.filter(f=>!k||(f[0]+f[1]).includes(k));return l.length?`<section class="block"><h3>${m.t} <small>${String(i+1).padStart(2,"0")}</small></h3>${faqHTML(l,(i+1)+".")}</section>`:""}).join("")||`<p class="lead">没有找到相关问题，换个关键词试试。</p>`;bindFaq(el)};
+  draw();document.getElementById("fq").oninput=e=>draw(e.target.value.trim());
+}
+
+function copy(t,btn){const o=btn.textContent;navigator.clipboard.writeText(t).then(()=>{btn.textContent="已复制";setTimeout(()=>btn.textContent=o,1500)}).catch(()=>{btn.textContent="请手动选中复制"})}
+
+/* cards */
+let CARDS=[
+ ["Inquiry","询盘","客户发来的询价，问款式、价格、MOQ、交期。"],["Quotation","报价单","含价格条款、付款方式、交期、有效期、包装、装柜量。"],
+ ["MOQ","最小起订量","Minimum Order Quantity。家具常以一个 40HQ 为 MOQ，可混装。"],["PI","形式发票","Proforma Invoice。确认订单细节，常作为合同和付定金的依据。"],
+ ["OEM","代工生产","按客户的设计和品牌生产。"],["ODM","原创设计制造","工厂出设计，客户挑款贴自己品牌。"],
+ ["Sectional","组合沙发","可拼接成 L 形或 U 形的沙发。"],["Serpentine Spring","S 簧 / 蛇形弹簧","沙发座面最常见的弹性结构。"],
+ ["Pocket Spring","独立袋装弹簧","每个弹簧独立装袋，坐感好、成本高。"],["HR Foam","高回弹海绵","High-Resilience Foam，回弹好、耐用。"],
+ ["Martindale","马丁代尔耐磨测试","面料耐磨次数，家用常见 2 万次以上。"],["KD","可拆装","Knock Down，拆开运输，省体积。"],
+ ["FOB","船上交货","卖方负责装上船及出口报关，之后运费、保险、风险归买方。"],["CIF","成本加保险费加运费","卖方付运费和保险，风险仍在装船时转移。"],
+ ["DDP","完税后交货","卖方负责送到并缴纳进口关税，卖方责任最大。"],["T/T","电汇","常见 30% 定金 + 70% 见提单副本付。"],
+ ["L/C","信用证","银行担保付款，单证相符才付款。"],["O/A","赊销","先发货后付款，风险最高。"],
+ ["CBM","立方米","长×宽×高（米），沙发按体积算运费。"],["40HQ","40 尺高柜","内容积约 76 m³，沙发最常用柜型。"],
+ ["FCL / LCL","整柜 / 拼箱","整柜一个客户包柜；拼箱按体积计费。"],["Freight Forwarder","货代","帮货主订舱、拖车、报关、做单据。"],
+ ["B/L","提单","海运物权凭证，正本在谁手里谁能提货。"],["Telex Release","电放","不用正本提单，船公司凭指示放货。"],
+ ["HS Code","商品编码","决定监管条件、退税率和进口关税。"],["Export Tax Rebate","出口退税","出口后退回部分增值税。"],
+ ["PP Sample","产前样","用大货材料做的样，确认后才量产。"],["AQL","可接受质量水平","验货抽样数量和允许缺陷数的标准。"],
+ ["FRI","尾期验货","Final Random Inspection，80% 以上包装完成后抽检。"],["TB117-2013","加州阻燃标准","美国联邦软体家具阻燃标准采用其要求。"],
+ ["REACH","欧盟化学品法规","限制产品中的有害化学物质。"],["GPSR","欧盟通用产品安全法规","2024 年 12 月起实施。"],
+ ["Prop 65","加州 65 号提案","含清单化学物质需加警示标签。"]];
+let ci=0,flipped=false;
+function renderCard(){const c=CARDS[ci];const f=document.getElementById("flash");
+  f.innerHTML=flipped?`<div class="cn">${c[1]}</div><div class="def">${c[2]}</div>`:`<div class="term">${c[0]}</div><div class="label" style="margin-top:10px">点击翻面</div>`;
+  document.getElementById("cardpos").textContent=(ci+1)+" / "+CARDS.length}
+document.getElementById("flash").onclick=document.getElementById("flip").onclick=()=>{flipped=!flipped;renderCard()};
+document.getElementById("flash").onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();flipped=!flipped;renderCard()}};
+document.getElementById("next").onclick=()=>{ci=(ci+1)%CARDS.length;flipped=false;renderCard()};
+document.getElementById("prev").onclick=()=>{ci=(ci-1+CARDS.length)%CARDS.length;flipped=false;renderCard()};
+document.getElementById("shuf").onclick=()=>{CARDS.sort(()=>Math.random()-.5);ci=0;flipped=false;renderCard()};
+
+/* tools */
+document.getElementById("tools").innerHTML=`
+ <div class="head"><div><h2>报价与装柜计算</h2><p class="lead">改任意数字，结果实时更新。用来练习报价逻辑，正式报价以公司模板和最新成本为准。</p></div></div>
+ <section class="block"><h3>装柜量</h3><div class="calc">
+  <label>外箱 长 cm<input id="L" type="number" value="210"></label><label>外箱 宽 cm<input id="W" type="number" value="95"></label>
+  <label>外箱 高 cm<input id="H" type="number" value="85"></label><label>每套箱数<input id="N" type="number" value="1"></label>
+  <label>装载率 %<input id="R" type="number" value="85"></label></div><div class="out" id="o1"></div></section>
+ <section class="block"><h3>FOB / CFR 报价</h3><div class="calc">
+  <label>工厂含税价 ¥/套<input id="C" type="number" value="1600"></label><label>杂费 ¥/套<input id="F" type="number" value="60"></label>
+  <label>退税率 %<input id="TR" type="number" value="13"></label><label>利润率 %<input id="PR" type="number" value="15"></label>
+  <label>汇率 ¥/USD<input id="X" type="number" value="7.0" step="0.01"></label><label>40HQ 海运费 USD<input id="OF" type="number" value="3500"></label></div>
+  <div class="out" id="o2"></div>
+  <p class="lead" style="font-size:13px;margin-top:10px">公式：退税 = 含税价 ÷ 1.13 × 退税率；FOB = (含税价 + 杂费 − 退税) ÷ (1 − 利润率) ÷ 汇率；CFR = FOB + 40HQ 运费 ÷ 装柜套数。默认数字只是示例，运费和退税率需核实。</p></section>`;
+function calc(){const v=id=>parseFloat(document.getElementById(id).value)||0;
+  const cbm=v("L")*v("W")*v("H")/1e6*v("N"),r=v("R")/100;
+  const q={};[["20GP",33],["40GP",67],["40HQ",76]].forEach(([n,c])=>q[n]=cbm?Math.floor(c*r/cbm):0);
+  document.getElementById("o1").innerHTML=`<div><b>${cbm.toFixed(2)}</b><span>每套体积 m³</span></div>`+Object.entries(q).map(([n,x])=>`<div><b>${x}</b><span>${n} 约装套数</span></div>`).join("");
+  const reb=v("C")/1.13*v("TR")/100,cost=v("C")+v("F")-reb,fob=v("X")&&v("PR")<100?cost/(1-v("PR")/100)/v("X"):0,cfr=q["40HQ"]?fob+v("OF")/q["40HQ"]:0;
+  document.getElementById("o2").innerHTML=`<div><b>¥${reb.toFixed(0)}</b><span>每套退税</span></div><div><b>¥${cost.toFixed(0)}</b><span>实际成本</span></div><div><b>$${fob.toFixed(1)}</b><span>FOB 单价 / 套</span></div><div><b>$${cfr.toFixed(1)}</b><span>CFR 单价 / 套（按 40HQ ${q["40HQ"]} 套）</span></div>`}
+document.querySelectorAll(".calc input").forEach(i=>i.oninput=calc);
+
+/* notes */
+const note=document.getElementById("note");note.value=S.get("note","");
+note.oninput=()=>{S.set("note",note.value);document.getElementById("saved").textContent="已自动保存"};
+document.getElementById("copyn").onclick=e=>copy(note.value,e.target);
+
+function show(t){document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.tab===t));
+  ["learn","cases","allfaq","cards","tools","notes"].forEach(id=>document.getElementById(id).hidden=id!==t)}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>show(b.dataset.tab));
+
+renderNav();renderLearn();renderCases();renderAllFaq();renderCard();calc();
+</script>
+</body>
+</html>
