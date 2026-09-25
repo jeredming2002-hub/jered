@@ -1,0 +1,13 @@
+{
+  "values": {
+    "uk:9401610000": "Third country duty: 0.00 %",
+    "uk:9401710000": "Third country duty: 0.00 %",
+    "us-mfn:9401.61.40": "Free",
+    "us-mfn:9401.61.60": "Free",
+    "us-mfn:9401.71.00": "Free"
+  },
+  "seenDocs": [
+    "2026-17925"
+  ],
+  "lastRun": "2026-09-25"
+}

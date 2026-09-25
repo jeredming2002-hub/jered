@@ -1,0 +1,158 @@
+{
+  "asOf": "2026-09-25",
+  "reviewedBy": "人工核实（Claude 检索官方来源）",
+  "note": "税率针对原产于中国的软体座椅（沙发、休闲椅）。合计税率 = 基础税率 + 各项加征关税，按海关完税价格计算。具体适用以进口国海关最终认定为准。",
+  "markets": [
+    {
+      "id": "us",
+      "name": "美国",
+      "en": "United States",
+      "status": "changed",
+      "statusText": "近 90 天有变动",
+      "lines": [
+        {
+          "hs": "9401.61",
+          "desc": "木框架软垫座椅（布艺/皮沙发主流）",
+          "layers": [
+            {"name": "基础税率 MFN", "rate": 0},
+            {"name": "301 关税（清单 3）", "rate": 25},
+            {"name": "232 关税（软体木家具）", "rate": 25}
+          ],
+          "total": 50,
+          "remark": "232 关税只覆盖 9401.61.4011 / 4031 / 6011 / 6031 这几个统计编码。232 商品不再叠加 2026 年 7 月的“强迫劳动 301”关税。"
+        },
+        {
+          "hs": "9401.71",
+          "desc": "金属框架软垫座椅",
+          "layers": [
+            {"name": "基础税率 MFN", "rate": 0},
+            {"name": "301 关税（清单 3）", "rate": 25},
+            {"name": "强迫劳动 301 关税", "rate": 12.5}
+          ],
+          "total": 37.5,
+          "remark": "不属于 232 覆盖范围，所以要叠加 2026 年 7 月 24 日起的 12.5%。"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-07-24",
+          "title": "“强迫劳动 301”关税生效，替代到期的 122 条临时附加税",
+          "summary": "美国贸易代表办公室（USTR）对 60 个经济体加征 10% 或 12.5%，中国适用 12.5%，并叠加在原有 301 关税之上。232 商品除外。同日，122 条 10% 临时附加税到期。",
+          "changes": [
+            {"hs": "9401.71 金属框架", "before": 35, "after": 37.5},
+            {"hs": "9401.61 木框架（232 商品）", "before": 50, "after": 50, "note": "不适用，维持不变"}
+          ],
+          "impact": "一套完税价格 USD 250 的金属框架沙发，关税从 USD 87.5 升到 USD 93.75。",
+          "docs": [
+            {"label": "USTR 最终行动公告（PDF）", "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/FLIP%20301%20Investigation%20Final%20Action%20FRN%207-23-26%20FINAL.pdf", "official": true},
+            {"label": "USTR 新闻稿", "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations", "official": true}
+          ]
+        },
+        {
+          "date": "2026-02-24",
+          "title": "最高法院判定 IEEPA 关税违法，相关关税终止，改征 122 条临时附加税",
+          "summary": "2026 年 2 月 20 日，最高法院在 Learning Resources v. Trump 案中裁定 IEEPA 不授权总统征收关税。芬太尼关税、对等关税于 2 月 24 日终止，随即改征为期 150 天的 10% 临时附加税（122 条），232 商品除外。",
+          "changes": [
+            {"hs": "9401.71 金属框架", "before": 45, "after": 35, "note": "301 25% + 芬太尼 10% + 对等 10% → 301 25% + 122 条 10%"},
+            {"hs": "9401.61 木框架（232 商品）", "before": null, "after": 50, "note": "IEEPA 部分取消，变化前的叠加方式以 CBP 为准"}
+          ],
+          "impact": "已缴的 IEEPA 关税可能可以申请退还，客户可能会问到。",
+          "docs": [
+            {"label": "美国国会研究处（CRS）解读", "url": "https://www.congress.gov/crs-product/LSB11398", "official": true},
+            {"label": "122 条附加税说明（Global Trade Alert）", "url": "https://globaltradealert.org/blog/from-ieepa-to-section-122", "official": false}
+          ]
+        },
+        {
+          "date": "2025-10-14",
+          "title": "232 关税：软体木家具加征 25%",
+          "summary": "第 10976 号总统公告对进口软体木制家具加征 25%，并叠加在 301 关税之上。原定 2026 年 1 月 1 日升到 30%，后来推迟到 2027 年 1 月 1 日。",
+          "changes": [
+            {"hs": "9401.61 木框架", "before": 25, "after": 50, "note": "不含当时的 IEEPA 关税"}
+          ],
+          "impact": "一套完税价格 USD 250 的木框架沙发，关税从 USD 62.5 翻倍到 USD 125。",
+          "docs": [
+            {"label": "第 10976 号总统公告（联邦公报 90 FR 48127）", "url": "https://www.federalregister.gov/d/2025-19482", "official": true},
+            {"label": "推迟涨价的修订公告（2026-01-09）", "url": "https://www.federalregister.gov/d/2026-00327", "official": true}
+          ]
+        }
+      ],
+      "upcoming": [
+        {"date": "2027-01-01", "title": "232 软体木家具关税计划从 25% 升到 30%", "detail": "9401.61 合计 50% → 55%。已推迟过一次，届时可能再调整。", "url": "https://www.federalregister.gov/d/2026-00327"}
+      ],
+      "background": "2018-09-24，301 清单 3 对中国家具加征 10%；2019-05-10 提高到 25%，一直沿用至今。"
+    },
+    {
+      "id": "eu",
+      "name": "欧盟",
+      "en": "European Union",
+      "status": "watch",
+      "statusText": "关税稳定，法规有变化",
+      "lines": [
+        {"hs": "9401.61", "desc": "木框架软垫座椅", "layers": [{"name": "第三国关税", "rate": 0}], "total": 0, "remark": "目前没有针对中国软体座椅的反倾销税。另外进口还要缴各国增值税（如德国 19%），可以抵扣，不属于关税成本。"},
+        {"hs": "9401.71", "desc": "金属框架软垫座椅", "layers": [{"name": "第三国关税", "rate": 0}], "total": 0, "remark": ""}
+      ],
+      "events": [
+        {
+          "date": "2026-07-01",
+          "title": "低价值电商包裹每件征收 3 欧元关税",
+          "summary": "取消 150 欧元以下包裹免关税，改为每个品类每件 3 欧元的临时固定关税，执行到 2028 年 7 月 1 日。",
+          "changes": [{"hs": "150 欧元以下的电商小包裹", "before": 0, "after": null, "afterText": "€3 / 件", "note": "整柜沙发不受影响；靠垫、沙发套等小件直发消费者会受影响"}],
+          "impact": "主要影响跨境电商直发小件，对 B2B 整柜出口基本没有影响。",
+          "docs": [
+            {"label": "欧盟委员会公告", "url": "https://commission.europa.eu/news-and-media/news/ensuring-fairness-and-safety-eur3-customs-duty-low-value-parcels-2026-06-29_en", "official": true},
+            {"label": "欧盟理事会新闻稿", "url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/12/customs-council-agrees-to-levy-customs-duty-on-small-parcels-as-of-1-july-2026/", "official": true}
+          ]
+        },
+        {
+          "date": "2025-12-23",
+          "title": "零毁林法规（EUDR）再次推迟",
+          "summary": "欧盟第 2025/2650 号条例把 EUDR 的适用日期推迟到 2026 年 12 月 30 日（大中型企业）和 2027 年 6 月 30 日（微小企业）。木制品（含实木框架家具）在适用范围内。",
+          "changes": [{"hs": "含木材的家具", "before": null, "beforeText": "2025-12-30 适用", "after": null, "afterText": "2026-12-30 适用", "note": "推迟 1 年"}],
+          "impact": "欧洲客户会要求提供木材来源的地理位置信息。2026 年底前要准备好供应链资料。",
+          "docs": [
+            {"label": "欧盟第 2025/2650 号条例（EUR-Lex）", "url": "https://eur-lex.europa.eu/eli/reg/2025/2650/oj", "official": true},
+            {"label": "Access2Markets 说明", "url": "https://trade.ec.europa.eu/access-to-markets/en/news/delay-until-december-2026-and-other-developments-implementation-eudr-regulation", "official": true}
+          ]
+        },
+        {
+          "date": "2024-12-13",
+          "title": "通用产品安全法规（GPSR）实施",
+          "summary": "欧盟第 2023/988 号条例取代原通用产品安全指令，要求产品在欧盟有负责的经营者、可以追溯，并提供安全信息。",
+          "changes": [{"hs": "所有消费品", "before": null, "beforeText": "GPSD 指令", "after": null, "afterText": "GPSR 条例", "note": "不改变关税，但增加合规成本"}],
+          "impact": "标签和说明书要写上欧盟负责人信息，电商卖家尤其要注意。",
+          "docs": [{"label": "欧盟第 2023/988 号条例（EUR-Lex）", "url": "https://eur-lex.europa.eu/eli/reg/2023/988/oj", "official": true}]
+        }
+      ],
+      "upcoming": [
+        {"date": "2026-12-30", "title": "EUDR 对大中型企业开始适用", "detail": "含木材的家具需要提供尽职调查和地理位置信息。欧盟 2026 年还在审议进一步简化，需核实。", "url": "https://eur-lex.europa.eu/eli/reg/2025/2650/oj"}
+      ],
+      "background": "欧盟对家具长期执行 0% 的第三国关税，主要门槛在法规和合规。"
+    },
+    {
+      "id": "uk",
+      "name": "英国",
+      "en": "United Kingdom",
+      "status": "stable",
+      "statusText": "稳定",
+      "lines": [
+        {"hs": "9401.61", "desc": "木框架软垫座椅", "layers": [{"name": "第三国关税（UKGT）", "rate": 0}], "total": 0, "remark": "进口增值税 20%，可以抵扣，不属于关税成本。"},
+        {"hs": "9401.71", "desc": "金属框架软垫座椅", "layers": [{"name": "第三国关税（UKGT）", "rate": 0}], "total": 0, "remark": ""}
+      ],
+      "events": [
+        {
+          "date": "2021-01-01",
+          "title": "英国全球关税（UK Global Tariff）取代欧盟关税",
+          "summary": "脱欧过渡期结束，英国开始执行自己的关税表。软体座椅的第三国关税为 0%，此后没有变过。",
+          "changes": [{"hs": "9401.61 / 9401.71", "before": 0, "after": 0, "note": "从欧盟关税改为英国关税，税率不变"}],
+          "impact": "英国市场的主要门槛是阻燃法规（UK FFR 1988），不是关税。",
+          "docs": [
+            {"label": "英国关税查询：9401610000", "url": "https://www.trade-tariff.service.gov.uk/commodities/9401610000", "official": true},
+            {"label": "英国关税查询：9401710000", "url": "https://www.trade-tariff.service.gov.uk/commodities/9401710000", "official": true}
+          ]
+        }
+      ],
+      "upcoming": [],
+      "background": "近五年英国对这两个编码没有关税变动，所以这里只有一条记录。以后有变化，每日检查会自动发现。"
+    }
+  ]
+}

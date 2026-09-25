@@ -1,0 +1,42 @@
+# 放到仓库根目录的 .github/workflows/tariff-watch.yml
+# 每天北京时间 9:00 检查一次关税数据源，有变化就开一个 Issue 等你确认。
+name: 关税每日检查
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # UTC 01:00 = 北京时间 09:00
+  workflow_dispatch:       # 也可以在 Actions 页面手动运行
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 检查官方数据源
+        run: node "外贸学习/tariff-watch/check.mjs"
+
+      - name: 有变化时开 Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPORT="外贸学习/tariff-watch/report.md"
+          if [ -s "$REPORT" ]; then
+            gh issue create --title "关税检查：$(date -u +%F) 有待确认的内容" --body-file "$REPORT"
+          fi
+
+      - name: 保存检查记录
+        run: |
+          git config user.name "tariff-watch"
+          git config user.email "tariff-watch@users.noreply.github.com"
+          git add "外贸学习/tariff-watch/state.json"
+          git diff --cached --quiet || git commit -m "关税检查记录 $(date -u +%F) [skip ci]"
+          git push
